@@ -31,6 +31,14 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -97,8 +105,13 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+search:
+  path: search.json
+  zipPath: search.zip
+  versionPath: searchVersion.txt
+  field: post
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: TKL
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
