@@ -75,27 +75,7 @@
             <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
             <!-- Dropdown Menu -->
 			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
             
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
             
         </ul>
         <!-- Lists in Slidebars -->
@@ -103,8 +83,8 @@
             
             <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
             
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
         </ul>
     </div>
     
@@ -133,19 +113,9 @@
                             <li><a href="/" class="animsition-link">Victor-blog</a></li>
                             <li class="nolink"><span>Always </span>Creative.</li>
                             
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
                             
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
                             
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
@@ -193,6 +163,14 @@
 <blockquote>
 <p>Object.assign()能实现单层的深拷贝,多层结构则不行</p>
 </blockquote>
+<p>关于Object.assign(target, …sources)</p>
+<ul>
+<li>target: 目标对象</li>
+<li>sources: 源对象(可多个)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 复制对象</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>: <span class="string">&#x27;gss&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">let</span> objClone = <span class="built_in">Object</span>.assign(&#123;&#125;, obj)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 合并对象</span></span><br><span class="line"><span class="keyword">let</span> o1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;</span><br><span class="line"><span class="keyword">let</span> o2 = &#123;<span class="attr">b</span>:<span class="string">&#x27;b&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">let</span> o3 = &#123;<span class="attr">c</span>:<span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">let</span> concatO = <span class="built_in">Object</span>.assign(o1,o2,o3) <span class="comment">// o1也会被改变,相同属性会覆盖:&#123; a: 1, b: &quot;b&quot;, c: 3 &#125;</span></span><br><span class="line"><span class="keyword">let</span> concatO2 = <span class="built_in">Object</span>.assign(&#123;&#125;, o1,o2,o3)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
 <h4 id="利用JSON-stringify-实现数组-对象的深拷贝"><a href="#利用JSON-stringify-实现数组-对象的深拷贝" class="headerlink" title="利用JSON.stringify()实现数组,对象的深拷贝"></a>利用JSON.stringify()实现数组,对象的深拷贝</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, &#123; <span class="attr">value</span>: <span class="number">5</span> &#125;];</span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(arr));</span><br><span class="line">arr[<span class="number">4</span>].value = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">//[1, 2, 3, 4, &#123; value: 5 &#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">&quot;mei&quot;</span>,</span><br><span class="line">    address: &#123;<span class="attr">city</span>: <span class="string">&quot;shanghai&quot;</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj));</span><br><span class="line">obj.address.city = <span class="string">&quot;beijing&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj1); <span class="comment">//&#123;name: &quot;mei&quot;, address:&#123;city: &quot;shanghai&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>该方法不能对undefined, symbol, 函数 进行深度拷贝。</p>
@@ -207,10 +185,6 @@
         ← JS-深入理解原型
     </a>
     
-    
-    <a class="pull-right" href="/2020/09/17/hello-world/">
-        Hello World →
-    </a>
     
 </nav>
 
@@ -282,19 +256,9 @@
             <div class="social">
                 <ul>
                     
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
