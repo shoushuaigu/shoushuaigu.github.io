@@ -227,6 +227,15 @@ hr {
 	display: table-cell;
 	vertical-align: middle;
 }
+.center-me h2{
+	background: #000;
+	color: #fff!important;
+	padding: 0!important;
+}
+.center-me p{
+	background: #000;
+	color: #fff!important;
+}
 /* No padding on-the-fly */
 .nopadding {
 	padding: 0;
