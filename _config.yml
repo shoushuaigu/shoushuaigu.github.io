@@ -49,7 +49,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -122,3 +122,8 @@ deploy:
 - type: 'git'
   repo: 'https://e.coding.net/shoushuaigu/victor-blog/victor-blog.git'
   branch: 'master'
+# hexo-admin authentification
+admin:
+  username: victor
+  password_hash: $2a$10$LQtdo4J3pTc79o.7rlRIjOK3deweWNe4ouSlNUOF9VYAy4tp4.0Bq
+  secret: my super secret phrase

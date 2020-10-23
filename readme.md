@@ -68,4 +68,21 @@ theme: landscape    主题文件夹名
 ```
 ### 搜索框
 ### 评论系统
+### 文章中添加图片
+- _config.yml配置post_asset_folder: true
+- hexo new xxx  新建文章时会同事新建同名(xxx)文件夹
+- 将文章所需图片放在xxx文件夹
+- 文章中引入图片\!\[](a.png)
+- 注意:a.png无需额外路径;本地服务和预览图片无法显示,但发布后正常显示
+### 添加admin管理系统
+- 安装插件hexo-admin
+```
+npm i hexo-admin --save
+```
+- 启动服务hexo server
+- 访问localhost:4000/admin;即可进入管理页面
+- 设置管理权限
+  - 网站中点击右上角的settings，然后点击下面的 Setup authentification here 
+  - 填写好用户名与密码，还有secret
+  - 填好后,页面下方会自动生成配置信息,复制到_config.yml配置文件即可,重启服务访问,会提示输入账号密码
 
