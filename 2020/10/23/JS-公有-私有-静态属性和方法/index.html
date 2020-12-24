@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | Victor-blog</title>
+  <title>JS-公有-私有-静态属性和方法 | Victor-blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -137,117 +137,120 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/12/17/数组操作相关/">数组操作相关</a></h4>
-                            
-                            <p><time datetime="2020-12-17T05:43:40.000Z"><a href="/2020/12/17/数组操作相关/">2020-12-17</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/11/19/JS-Class详解/">JS-Class详解</a></h4>
-                            
-                            <p><time datetime="2020-11-19T07:03:44.000Z"><a href="/2020/11/19/JS-Class详解/">2020-11-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/23/JS-公有-私有-静态属性和方法/">JS-公有-私有-静态属性和方法</a></h4>
-                            
-                            <p><time datetime="2020-10-23T05:49:18.000Z"><a href="/2020/10/23/JS-公有-私有-静态属性和方法/">2020-10-23</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/20/JS-深入理解继承/">JS-深入理解继承</a></h4>
-                            
-                            <p><time datetime="2020-10-20T08:44:59.000Z"><a href="/2020/10/20/JS-深入理解继承/">2020-10-20</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/15/JS-深入理解原型/">JS-深入理解原型</a></h4>
-                            
-                            <p><time datetime="2020-10-15T02:33:15.000Z"><a href="/2020/10/15/JS-深入理解原型/">2020-10-15</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/14/JS-深浅拷贝/">JS:深浅拷贝</a></h4>
-                            
-                            <p><time datetime="2020-10-14T07:18:14.000Z"><a href="/2020/10/14/JS-深浅拷贝/">2020-10-14</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-10-23T05:49:18.000Z" itemprop="datePublished">
+          2020-10-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS/'>JS</a>
+    
+    
+</span>
+                <h1>JS-公有-私有-静态属性和方法</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="公有属性和方法"><a href="#公有属性和方法" class="headerlink" title="公有属性和方法"></a>公有属性和方法</h4><p>公有方法必须通过实例化调用;<br>公有方法中不能使用this调用静态方法 属性,必须构造函数(对象)本身调用;<br>公有方法不能调用私有属性方法(调用即是特权方法)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在构造函数中</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span> (<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name <span class="comment">// 公有属性</span></span><br><span class="line">    <span class="built_in">this</span>.age = age</span><br><span class="line">&#125;</span><br><span class="line">User.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 公有方法</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 在对象中</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    name: <span class="string">&#x27;gss&#x27;</span>,</span><br><span class="line">    getName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">    getName () &#123;&#125;   <span class="comment">// 同上</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="私有属性和方法"><a href="#私有属性和方法" class="headerlink" title="私有属性和方法"></a>私有属性和方法</h4><p>对象的私有方法和属性,外部是不可以访问的;<br>在方法的内部不是能this调用对象的公有方法、公有属性、特权方法的。</p>
+<blockquote>
+<p>在对象中创建私有数据的方式被称为模块模式</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span> (<span class="params">name, age, sex</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.sex = sex</span><br><span class="line">    <span class="keyword">const</span> myName = name <span class="comment">// 私有属性</span></span><br><span class="line">    <span class="keyword">const</span> myAge = age</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getName</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 私有方法</span></span><br><span class="line">        <span class="keyword">return</span> myName</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getSex</span> (<span class="params"></span>) </span>&#123;    <span class="comment">// 私有方法不能this调用公有方法属性</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>)   <span class="comment">// window</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.sex)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.activeGetSex = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        getSex()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> u = <span class="keyword">new</span> User(<span class="string">&#x27;g&#x27;</span>,<span class="number">11</span>,<span class="string">&#x27;man&#x27;</span>)</span><br><span class="line">u.activeGetSex()</span><br><span class="line"><span class="comment">// 在对象中,借助闭包实现</span></span><br><span class="line"><span class="keyword">const</span> obj = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 私有属性和方法</span></span><br><span class="line">    <span class="keyword">const</span> a = <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">// 公有</span></span><br><span class="line">        b: <span class="number">2</span>,</span><br><span class="line">        getB()&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="built_in">this</span>.b)</span><br><span class="line">        &#125;,</span><br><span class="line">        getA()&#123;    <span class="comment">// 访问了私有属性,可以认为是特权方法</span></span><br><span class="line">            <span class="built_in">console</span>.log(a)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="特权方法"><a href="#特权方法" class="headerlink" title="特权方法"></a>特权方法</h4><p>可以访问私有属性和方法的公有方法;<br>特权方法通过this调用公有方法、公有属性;<br>在方法体内直接调用私有属性和私有方法。</p>
+<blockquote>
+<p>特权方法能够在构造函数外面公开访问（仅限于实例化的对象），而且还能够访问私有成员和方法，因此用来做为对象或者构造函数的接口最合适不过了，通过特权方法我们可以控制公有方法对私有属性或方法的访问。 在JS框架的扩展中有很多应用。</p>
+</blockquote>
+<blockquote>
+<h5 id="特权方法和公有方法的区别"><a href="#特权方法和公有方法的区别" class="headerlink" title="特权方法和公有方法的区别"></a>特权方法和公有方法的区别</h5><p>相同点: 都能访问公有属性,都能在构造函数外公开访问<br>不同点: 特权方法能访问私有属性和方法,公有方法不能;每个实例都有一份特权方法的副本,公有方法为所有实例共享(在原型上;)</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span> (<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.age = age</span><br><span class="line">    <span class="keyword">var</span> name = name   <span class="comment">// 私有属性</span></span><br><span class="line">    <span class="built_in">this</span>.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    <span class="comment">// 特权方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(name)</span><br><span class="line">        <span class="keyword">return</span> name</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.alertAge = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;   <span class="comment">// 特权方法调用公有方法</span></span><br><span class="line">        alert(<span class="built_in">this</span>.getAge())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">User.prototype.getAge = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.age</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 结合模块模式创建对象</span></span><br><span class="line"><span class="keyword">const</span> Obj = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> _num = <span class="number">1</span>    <span class="comment">// 私有属性</span></span><br><span class="line">    <span class="keyword">const</span> _addNum = <span class="function"><span class="keyword">function</span> (<span class="params">base</span>) </span>&#123;   <span class="comment">// 私有方法</span></span><br><span class="line">        _num += base</span><br><span class="line">        <span class="built_in">console</span>.log(_num)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Foo</span> (<span class="params">baseNum=<span class="number">0</span></span>) </span>&#123;  <span class="comment">// 构造函数</span></span><br><span class="line">        <span class="built_in">this</span>.baseNum = baseNum  <span class="comment">// 公有属性</span></span><br><span class="line">        <span class="built_in">this</span>.getNum = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 特权方法</span></span><br><span class="line">            <span class="built_in">console</span>.log(_num)</span><br><span class="line">            <span class="keyword">return</span> _num</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Foo.prototype.getBaseNum = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    <span class="comment">// 公有方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.baseNum)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.baseNum</span><br><span class="line">    &#125;</span><br><span class="line">    Foo.prototype.addNum = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    <span class="comment">// 特权方法</span></span><br><span class="line">        _addNum(<span class="built_in">this</span>.baseNum)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Foo</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="keyword">const</span> o = <span class="keyword">new</span> Obj(<span class="number">10</span>)</span><br><span class="line">o.getBaseNum()</span><br><span class="line">o.getNum()</span><br><span class="line">o.addNum()</span><br><span class="line">o.getNum()</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="静态属性和方法"><a href="#静态属性和方法" class="headerlink" title="静态属性和方法"></a>静态属性和方法</h4><p>js中无需实例化就可调用的属性和方法;<br>实例不能调用静态方法属性;<br>静态方法无法调用公有属性、公有方法、私有方法、私有属性、特权方法和原型属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">User</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">User.myName = <span class="string">&#x27;victor&#x27;</span> <span class="comment">// 静态属性(注意:不能用&#x27;name&#x27;,&#x27;name&#x27;属性为User构造函数本身的保留字段,不能更改,更改也不会生效)</span></span><br><span class="line">User.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">// 静态方法</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.myName</span><br><span class="line">&#125;</span><br><span class="line">User.getName()</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="静态类"><a href="#静态类" class="headerlink" title="静态类"></a>静态类</h4><p>静态属性和方法不用上述构造函数的形式,可以直接用字面量的形式创建对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> User = &#123;</span><br><span class="line">    init: <span class="function"><span class="keyword">function</span> (<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name</span><br><span class="line">        <span class="built_in">this</span>.age = age</span><br><span class="line">    &#125;,</span><br><span class="line">    getName() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">User.init(<span class="string">&#x27;gss&#x27;</span>, <span class="number">18</span>)</span><br><span class="line">User.getName()</span><br><span class="line">User.name</span><br></pre></td></tr></table></figure>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>世界纷繁亦纷扰~</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/11/19/JS-Class%E8%AF%A6%E8%A7%A3/" style="float: left;">
+        ← JS-Class详解
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/10/20/JS-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E7%BB%A7%E6%89%BF/">
+        JS-深入理解继承 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | Victor-blog</title>
+  <title>JS-Class详解 | Victor-blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -137,117 +137,108 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/12/17/数组操作相关/">数组操作相关</a></h4>
-                            
-                            <p><time datetime="2020-12-17T05:43:40.000Z"><a href="/2020/12/17/数组操作相关/">2020-12-17</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/11/19/JS-Class详解/">JS-Class详解</a></h4>
-                            
-                            <p><time datetime="2020-11-19T07:03:44.000Z"><a href="/2020/11/19/JS-Class详解/">2020-11-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/23/JS-公有-私有-静态属性和方法/">JS-公有-私有-静态属性和方法</a></h4>
-                            
-                            <p><time datetime="2020-10-23T05:49:18.000Z"><a href="/2020/10/23/JS-公有-私有-静态属性和方法/">2020-10-23</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/20/JS-深入理解继承/">JS-深入理解继承</a></h4>
-                            
-                            <p><time datetime="2020-10-20T08:44:59.000Z"><a href="/2020/10/20/JS-深入理解继承/">2020-10-20</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/15/JS-深入理解原型/">JS-深入理解原型</a></h4>
-                            
-                            <p><time datetime="2020-10-15T02:33:15.000Z"><a href="/2020/10/15/JS-深入理解原型/">2020-10-15</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/10/14/JS-深浅拷贝/">JS:深浅拷贝</a></h4>
-                            
-                            <p><time datetime="2020-10-14T07:18:14.000Z"><a href="/2020/10/14/JS-深浅拷贝/">2020-10-14</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-11-19T07:03:44.000Z" itemprop="datePublished">
+          2020-11-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS/'>JS</a>
+    
+    
+</span>
+                <h1>JS-Class详解</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h3><p>类是’特殊的函数’,两种声明方式,类声明,类表达式<br>类不存在提升问题,需要先生命,否则会报错<br>首字母大写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类声明</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> () &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 类表达式</span></span><br><span class="line"><span class="keyword">const</span> Super = <span class="class"><span class="keyword">class</span> </span>&#123;&#125;  <span class="comment">// 匿名表达式   super.name = &#x27;super&#x27;</span></span><br><span class="line"><span class="keyword">const</span> Super = <span class="class"><span class="keyword">class</span> <span class="title">Super2</span> </span>&#123;&#125;   <span class="comment">// 具名表达式   super.name = &#x27;super2&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="类体和方法定义"><a href="#类体和方法定义" class="headerlink" title="类体和方法定义"></a>类体和方法定义</h3><p>{}内为类体,默认严格模式<br>constructor构造函数,必须有且只能有一个,不写会默认添加</p>
+<h4 id="原型方法"><a href="#原型方法" class="headerlink" title="原型方法"></a>原型方法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> (a, b) &#123;</span><br><span class="line">        <span class="built_in">this</span>.a = a</span><br><span class="line">        <span class="built_in">this</span>.b = b</span><br><span class="line">    &#125;</span><br><span class="line">    get area () &#123;   <span class="comment">// getter</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.getArea()</span><br><span class="line">    &#125;</span><br><span class="line">    getArea () &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.a * <span class="built_in">this</span>.b</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> s = <span class="keyword">new</span> Super(<span class="number">2</span>, <span class="number">5</span>)</span><br><span class="line">s.area  <span class="comment">// getter属于原型方法,须实例化调用</span></span><br></pre></td></tr></table></figure>
+<h4 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h4><p>static关键字声明</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> () &#123;&#125;</span><br><span class="line">    <span class="keyword">static</span> showArea (a, b) &#123;</span><br><span class="line">        <span class="keyword">return</span> a * b</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Super.showArea(<span class="number">2</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="私有属性和原型属性"><a href="#私有属性和原型属性" class="headerlink" title="私有属性和原型属性"></a>私有属性和原型属性</h4><p>必须在类外定义</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;&#125;</span><br><span class="line">Super.age = <span class="string">&#x27;18&#x27;</span></span><br><span class="line">Super.prototype.sex = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="关于this绑定"><a href="#关于this绑定" class="headerlink" title="关于this绑定"></a>关于this绑定</h3><p>由于class默认严格模式,当this没有指定时会是undefined而不是global</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> () &#123;&#125;</span><br><span class="line">    showThis () &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Super2</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Super2.prototype.showThis = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> s = <span class="keyword">new</span> Super()</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="keyword">new</span> Super2()</span><br><span class="line"><span class="comment">// s.showThis = Super</span></span><br><span class="line"><span class="comment">// s2.showThis = global     箭头函数this绑定看定义时其外层函数环境,如果不用箭头函数则为Super2</span></span><br><span class="line"><span class="keyword">let</span> showThis = s.showThis</span><br><span class="line"><span class="keyword">let</span> showThis2 = s2.showThis</span><br><span class="line"><span class="comment">// showThis = undefined     严格模式</span></span><br><span class="line"><span class="comment">// showThis2 = global       非严格模式</span></span><br></pre></td></tr></table></figure>
+<h3 id="extends扩展子类"><a href="#extends扩展子类" class="headerlink" title="extends扩展子类"></a>extends扩展子类</h3><p>子类构造函数中须调super()<br>extends也可继承构造函数类</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> (name) &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name</span><br><span class="line">    &#125;</span><br><span class="line">    wangwang () &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name</span><br><span class="line">&#125;</span><br><span class="line">Animal.prototype.wangwang = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> (name) &#123;</span><br><span class="line">        <span class="built_in">super</span>(name)</span><br><span class="line">    &#125;</span><br><span class="line">    ww () &#123;</span><br><span class="line">        <span class="built_in">this</span>.wangwang()</span><br><span class="line">        <span class="comment">// super.wangwang() 超类调用</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> dog = <span class="keyword">new</span> Dog(<span class="string">&#x27;pdd&#x27;</span>)</span><br><span class="line">dog.ww()</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/12/17/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E7%9B%B8%E5%85%B3/" style="float: left;">
+        ← 数组操作相关
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/10/23/JS-%E5%85%AC%E6%9C%89-%E7%A7%81%E6%9C%89-%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">
+        JS-公有-私有-静态属性和方法 →
+    </a>
+    
+</nav>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>世界纷繁亦纷扰~</p>
-        </div>
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

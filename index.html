@@ -174,6 +174,121 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2020/12/17/数组操作相关/">数组操作相关</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-12-17T05:43:40.000Z" itemprop="datePublished">
+          2020-12-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/Array/'>Array</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        数组操作方法
+
+Establish方法–’创建数组’
+Mutator方法–’突变方法’–改变原数组
+Accessor方法–’访问方法’–不改变原数组
+Iteration方法–’遍历方法’
+
+
+Establish(创建数组的方式)字面量,构造器方法123let arr = [1,2,3]let arr = new Array(2)  // [empty*2]    只有一个数字时表示数组长度,长度为2的空数组let arr = Array
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/12/17/数组操作相关/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/11/19/JS-Class详解/">JS-Class详解</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-11-19T07:03:44.000Z" itemprop="datePublished">
+          2020-11-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS/'>JS</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        定义类类是’特殊的函数’,两种声明方式,类声明,类表达式类不存在提升问题,需要先生命,否则会报错首字母大写
+123456789// 类声明class Super &#123;    constructor () &#123;    &#125;&#125;// 类表达式const Super = class &#123;&#125;  // 匿名表达式   super.name = &#x27;super&#x27;const Supe
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/11/19/JS-Class详解/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/10/23/JS-公有-私有-静态属性和方法/">JS-公有-私有-静态属性和方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-10-23T05:49:18.000Z" itemprop="datePublished">
+          2020-10-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS/'>JS</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        公有属性和方法公有方法必须通过实例化调用;公有方法中不能使用this调用静态方法 属性,必须构造函数(对象)本身调用;公有方法不能调用私有属性方法(调用即是特权方法)
+12345678910111213141516// 在构造函数中function User (name, age) &#123;    this.name = name // 公有属性    this.age = age&#125;User.prototype.getNa
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/10/23/JS-公有-私有-静态属性和方法/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2020/10/20/JS-深入理解继承/">JS-深入理解继承</a></h3>
                     <span>
                         <span class="post-meta">
@@ -192,7 +307,9 @@
                 <div class="col-md-8">
                     <p>
                       
-                        常见的继承7种方式:
+                        JS的继承是基于原型实现的
+
+常见的继承7种方式:
 
 原型继承
 借用构造函数继承(经典继承)
@@ -200,10 +317,11 @@
 原型式继承
 寄生式继承
 寄生组合式继承
-ES6 class继承
+ES6 Class继承
 
 
-
+原型继承这种方式是把子类原型指向父类实例,子类实例通过原型链找到父类实例,再通过父类实例找到父类原型,实现继承.
+123456789101112131415function Sup(name) &#123;    this.name = name  
                       
                     </p>
                     
