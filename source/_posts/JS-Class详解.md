@@ -1,7 +1,11 @@
 ---
-title: JS-Class详解
+title: Js-Class详解
 date: 2020-11-19 15:03:44
-tags: JS
+tags: 
+    - Js属性&方法
+    - ES6
+categories: 
+            - ES6
 ---
 ### 定义类
 类是'特殊的函数',两种声明方式,类声明,类表达式

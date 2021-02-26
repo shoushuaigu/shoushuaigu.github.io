@@ -1,7 +1,10 @@
 ---
-title: JS-深入理解原型
+title: Js-深入理解原型
 date: 2020-10-15 10:33:15
-tags: JS
+tags: 
+    - Js原型&继承
+categories: 
+            - Js深入
 ---
 ## 深入理解原型
 本文主要介绍:
