@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>浏览器缓存 | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-03-02T06:19:54.000Z" itemprop="datePublished">
+          2021-03-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/web/'>web</a>
+    
+    
+</span>
+                <h1>浏览器缓存</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="关于web缓存"><a href="#关于web缓存" class="headerlink" title="关于web缓存"></a>关于web缓存</h3><h4 id="什么是缓存"><a href="#什么是缓存" class="headerlink" title="什么是缓存"></a>什么是缓存</h4><ul>
+<li>web缓存是指web资源(html,js,css,img,数据等)存在于服务端或客户端的副本.</li>
+<li>缓存会根据请求保存或输出副本,当一个请求来到时,如果是相同url,会根据缓存机制决定是直接返回缓存副本还是请求接口获得新的内容并保存缓存副本.</li>
+</ul>
+<h4 id="缓存的好处和弊端"><a href="#缓存的好处和弊端" class="headerlink" title="缓存的好处和弊端"></a>缓存的好处和弊端</h4><p>缓存可以说是性能优化中简单有效的方式了<br>对于一个请求来说,可简单分为三部分,发起网络请求,服务端处理,客户端响应,缓存主要对1,3部进行优化.比如直接使用缓存不发请求或请求了,但数据没变化,不用返回数据继续使用缓存.</p>
+<ul>
+<li>减少网络延迟,页面响应更快</li>
+<li>减少网络带宽消耗</li>
+<li>降低服务端压力</li>
+</ul>
+<p>当用户打开页面,缓存了一些静态资源文件,这时新版本发布,用户无法访问最新页面.<br>解决办法</p>
+<ul>
+<li>资源加版本号: app-v-1.2.0.js</li>
+<li>加hash值: app-ef1d8c670o00b204e9800998ecfere.js</li>
+</ul>
+<h3 id="缓存过程分析"><a href="#缓存过程分析" class="headerlink" title="缓存过程分析"></a>缓存过程分析</h3><p>浏览器和服务端通信是应答模式,即:浏览器发http请求,服务器响应请求.那么浏览器怎么知道缓存什么资源,怎么缓存呢?请求过程如下:<br><img src="%E7%BC%93%E5%AD%98%E8%BF%87%E7%A8%8B.webp"></p>
+<ul>
+<li>每次请求都会先查询缓存是否存在和能否使用</li>
+<li>浏览器每次通信成功,拿到新鲜数据和服务端返回的缓存标识,根据标识缓存</li>
+</ul>
+<p>通过上图,我们了解到浏览器会根据标识判断缓存能否使用,那么缓存在哪里存放以及标识的具体规则是怎样的呢?</p>
+<h3 id="缓存的位置"><a href="#缓存的位置" class="headerlink" title="缓存的位置"></a>缓存的位置</h3><p>大致分为四种,并各有优先级,按浏览器查找缓存先后的优先级排序:</p>
+<ul>
+<li>service worker</li>
+<li>memory cache  (内存缓存)</li>
+<li>disk cache    (磁盘缓存)</li>
+<li>push cache    (推送缓存)</li>
+</ul>
+<h4 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h4><p>Service Worker 是运行在浏览器背后的独立线程，一般可以用来实现缓存功能。使用 Service Worker的话，传输协议必须为 HTTPS。因为 Service Worker 中涉及到请求拦截，所以必须使用 HTTPS 协议来保障安全。<b>Service Worker 的缓存与浏览器其他内建的缓存机制不同，它可以让我们自由控制缓存哪些文件、如何匹配缓存、如何读取缓存，并且缓存是持续性的。</b><br>详见<a href="/web%E7%B3%BB%E5%88%97/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98ServiceWorker">【浏览器缓存-Service Worker】</a></p>
+<h4 id="memory-cache"><a href="#memory-cache" class="headerlink" title="memory cache"></a>memory cache</h4><p>Memory Cache 也就是内存中的缓存，主要包含的是当前中页面中已经抓取到的资源,例如页面上已经下载的样式、脚本、图片等。读取内存中的数据肯定比磁盘快,内存缓存虽然读取高效，可是缓存持续性很短，会随着进程的释放而释放。<b> 一旦我们关闭 Tab 页面，内存中的缓存也就被释放了. </b></p>
+<p>内存缓存中有一块重要的缓存资源是preloader(预加载)相关指令（例如&lt;link rel=”prefetch”&gt;）下载的资源。preloader的相关指令已经是页面优化的常见手段之一，它可以一边解析js/css文件，一边网络请求下一个资源。<br>详见<a href="/web%E7%B3%BB%E5%88%97/%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8A%A0%E8%BD%BD">【关于预加载】</a></p>
+<p>需要注意的是，内存缓存在缓存资源时并不关心返回资源的HTTP缓存头Cache-Control是什么值，同时资源的匹配也并非仅仅是对URL做匹配，还可能会对Content-Type，CORS等其他特征做校验。</p>
+<h4 id="disk-cache"><a href="#disk-cache" class="headerlink" title="disk cache"></a>disk cache</h4><p>Disk Cache 也就是存储在硬盘中的缓存，读取速度慢点，但是什么都能存储到磁盘中，比之 Memory Cache 胜在容量和存储时效性上。<b>即使在跨站点的情况下，相同地址的资源一旦被硬盘缓存下来，就不会再次去请求数据。</b></p>
+<h5 id="浏览器会把哪些文件丢进内存中？哪些丢进硬盘中？"><a href="#浏览器会把哪些文件丢进内存中？哪些丢进硬盘中？" class="headerlink" title="浏览器会把哪些文件丢进内存中？哪些丢进硬盘中？"></a>浏览器会把哪些文件丢进内存中？哪些丢进硬盘中？</h5><p>关于这点，网上说法不一，不过以下观点比较靠得住：</p>
+<ul>
+<li>对于大文件来说，大概率是不存储在内存中的，反之优先</li>
+<li>当前系统内存使用率高的话，文件优先存储进硬盘</li>
+</ul>
+<h4 id="push-cache"><a href="#push-cache" class="headerlink" title="push cache"></a>push cache</h4><p>关于push cache是怎么来的详见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26757514">浅谈 HTTP/2 Server Push</a><br>Push Cache（推送缓存）是 HTTP2 中的内容，当以上三种缓存都没有命中时，它才会被使用。它只在会话（Session）中存在，一旦会话结束就被释放，并且缓存时间也很短暂，在Chrome浏览器中只有5分钟左右，同时它也并非严格执行HTTP头中的缓存指令。</p>
+<ul>
+<li>所有的资源都能被推送，并且能够被缓存,但是 Edge 和 Safari 浏览器支持相对比较差</li>
+<li>可以推送 no-cache 和 no-store 的资源</li>
+<li>一旦连接被关闭，Push Cache 就被释放</li>
+<li>多个页面可以使用同一个HTTP2的连接，也就可以使用同一个Push Cache。这主要还是依赖浏览器的实现而定，出于对性能的考虑，有的浏览器会对相同域名但不同的tab标签使用同一个HTTP连接。</li>
+<li>Push Cache 中的缓存只能被使用一次</li>
+<li>浏览器可以拒绝接受已经存在的资源推送</li>
+<li>你可以给其他域名推送资源</li>
+</ul>
+<p><b>如果以上四种缓存都没有命中的话，那么只能发起请求来获取资源了。</b></p>
+<p>那么为了性能上的考虑，大部分的接口都应该选择好缓存策略，<b>通常浏览器缓存策略分为两种：强缓存和协商缓存，并且缓存策略都是通过设置 HTTP Header 来实现的。</b>缓存策略中将详细介绍缓存标识的具体规则.</p>
+<blockquote>
+<p>启发式缓存：如果没有设置缓存策略，浏览器默认的缓存策略</p>
+</blockquote>
+<h3 id="http缓存策略"><a href="#http缓存策略" class="headerlink" title="http缓存策略"></a>http缓存策略</h3><p>我们根据是否需要向服务器重新发起HTTP请求将缓存过程分为两个部分，分别是强缓存和协商缓存。<br>其中强缓存优先于协商缓存,即强缓存命中则不会走协商缓存</p>
+<h4 id="强缓存-本地缓存"><a href="#强缓存-本地缓存" class="headerlink" title="强缓存(本地缓存)"></a>强缓存(本地缓存)</h4><p>不会向服务器发送请求，直接从缓存中读取资源，在控制台的Network中可以看到该请求返回200的状态码，并且Size显示from disk cache或from memory cache。</p>
+<p>强缓存可以通过设置两种 HTTP Header 实现：</p>
+<ul>
+<li>Expires:失效时间</li>
+<li>Cache-Control:缓存控制,其中包括很多指令控制缓存策略</li>
+</ul>
+<p>两者同时存在时,Cache-Control&gt;&gt;Expires</p>
+<p><img src="%E5%BC%BA%E7%BC%93%E5%AD%98%E5%AE%9E%E4%BE%8B.png"></p>
+<h4 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Expires: Wed, 25 Sep 2019 08:13:53 GMT</span><br></pre></td></tr></table></figure>
+<p>这个属性是 http1.0 里的，表示缓存里的文件在这个属性对应时间以后过期,即未过期之前将不必请求,直接取缓存数据.</p>
+<p>Expires 是 HTTP1.0 的产物，受限于本地时间，如果修改了本地时间，可能会造成缓存失效。(多用于兼容ie浏览器,现代浏览器多用cache-control)</p>
+<h4 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: max-age&#x3D;300</span><br></pre></td></tr></table></figure>
+<p>上述配置表示300秒内资源不会过期,可直接取缓存使用.<br>在HTTP1.1中，Cache-Control是最重要的规则，主要用于控制网页缓存。<br>Cache-Control 可以在请求头或者响应头中设置，并且可以组合使用多种指令：<br><img src="Cache-Control.webp"></p>
+<ul>
+<li><p>public：所有内容都将被缓存（客户端和代理服务器都可缓存）。具体来说响应可被任何中间节点缓存，如 Browser &lt;– proxy1 &lt;– proxy2 &lt;– Server，中间的proxy可以缓存资源，比如下次再请求同一资源proxy1直接把自己缓存的东西给 Browser 而不再向proxy2要。</p>
+</li>
+<li><p>private：所有内容只有客户端可以缓存，Cache-Control的默认取值。具体来说，表示中间节点不允许缓存，对于Browser &lt;– proxy1 &lt;– proxy2 &lt;– Server，proxy 会老老实实把Server 返回的数据发送给proxy1,自己不缓存任何数据。当下次Browser再次请求时proxy会做好请求转发而不是自作主张给自己缓存的数据。</p>
+</li>
+<li><p>no-cache：客户端缓存内容，是否使用缓存则需要经过协商缓存来验证决定。表示不使用 Cache-Control的缓存控制方式做前置验证，而是使用 Etag 或者Last-Modified字段来控制缓存。需要注意的是，no-cache这个名字有一点误导。设置了no-cache之后，并不是说浏览器就不再缓存数据，只是浏览器在使用缓存数据时，需要先确认一下数据是否还跟服务器保持一致。</p>
+</li>
+<li><p>no-store：所有内容都不会被缓存，即不使用强制缓存，也不使用协商缓存</p>
+</li>
+<li><p>max-age：max-age=xxx (xxx is numeric)表示缓存内容将在xxx秒后失效</p>
+</li>
+<li><p>s-maxage（单位为s)：同max-age作用一样，只在代理服务器中生效（比如CDN缓存）。比如当s-maxage=60时，在这60秒中，即使更新了CDN的内容，浏览器也不会进行请求。max-age用于普通缓存，而s-maxage用于代理缓存。s-maxage的优先级高于max-age。如果存在s-maxage，则会覆盖掉max-age和Expires header。</p>
+</li>
+<li><p>max-stale：能容忍的最大过期时间。max-stale指令标示了客户端愿意接收一个已经过期了的响应。如果指定了max-stale的值，则最大容忍时间为对应的秒数。如果没有指定，那么说明浏览器愿意接收任何age的响应（age表示响应由源站生成或确认的时间与当前时间的差值）。</p>
+</li>
+<li><p>min-fresh：能够容忍的最小新鲜度。min-fresh标示了客户端不愿意接受新鲜度不多于当前的age加上min-fresh设定的时间之和的响应。</p>
+</li>
+</ul>
+<p><img src="%E5%BC%BA%E7%BC%93%E5%AD%98%E6%8C%87%E4%BB%A4%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8.webp"></p>
+<p>从图中我们可以看到，我们可以将多个指令配合起来一起使用，达到多个目的。比如说我们希望资源能被缓存下来，并且是客户端和代理服务器都能缓存，还能设置缓存失效时间等等。</p>
+<p>强缓存判断是否缓存的依据来自于是否超出某个时间或者某个时间段，而不关心服务器端文件是否已经更新，这可能会导致加载文件不是服务器端最新的内容，那我们如何获知服务器端内容是否已经发生了更新呢？此时我们需要用到协商缓存策略。</p>
+<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p>协商缓存就是强制缓存未命中后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程，主要有以下两种情况：</p>
+<ul>
+<li>协商缓存命中</li>
+</ul>
+<p><img src="%E5%8D%8F%E5%95%86%E5%91%BD%E4%B8%AD.webp"></p>
+<ul>
+<li>协商缓存未命中</li>
+</ul>
+<p><img src="%E5%8D%8F%E5%95%86%E6%9C%AA%E5%91%BD%E4%B8%AD.webp"></p>
+<p>协商缓存可以通过设置两种 HTTP Header 实现：Last-Modified 和 ETag 。<br>优先级ETag&gt;&gt;Last-Modified</p>
+<h4 id="Last-Modified和If-Modified-Since"><a href="#Last-Modified和If-Modified-Since" class="headerlink" title="Last-Modified和If-Modified-Since"></a>Last-Modified和If-Modified-Since</h4><p>response最后调整时间和requst是否来自最后调整时间</p>
+<p>浏览器在第一次访问资源时，服务器返回资源的同时，在响应头response header中添加 Last-Modified的header，值是这个资源在服务器上的最后修改时间，浏览器接收后缓存文件和header；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Last-Modified: Fri, 22 Jul 2016 01:47:00 GMT</span><br></pre></td></tr></table></figure>
+<p>浏览器下一次请求这个资源，浏览器检测到有 Last-Modified这个header，于是添加If-Modified-Since到请求头resquest header，值就是Last-Modified中的值；服务器再次收到这个资源请求，会根据这个值与服务器中这个资源的最后修改时间对比，如果没有变化，返回304和空的响应体，直接从缓存读取，反之说明文件有更新，返回新的资源文件和200.</p>
+<hr>
+<p>但是 Last-Modified 存在一些弊端：</p>
+<ul>
+<li>如果本地打开缓存文件，即使没有对文件进行修改，但还是会被检测为修改，服务端不能命中缓存</li>
+<li>因为 Last-Modified 只能以秒计时，如果在不可感知的时间(1秒)内修改完成文件，那么服务端会认为资源还是命中了，不会返回正确的资源</li>
+</ul>
+<h4 id="ETag和If-None-Match"><a href="#ETag和If-None-Match" class="headerlink" title="ETag和If-None-Match"></a>ETag和If-None-Match</h4><p>Etag是服务器响应请求时，返回当前资源文件的一个唯一标识(由服务器生成)，只要资源有变化，Etag就会重新生成。浏览器在下一次加载资源向服务器发送请求时，会将上一次返回的Etag值放到request header里的If-None-Match里，服务器只需要比较客户端传来的值跟自己服务器上该资源的ETag是否一致，如果匹配不上，200+资源+新的ETag发给客户端；反之则直接返回304知会客户端直接使用本地缓存即可。</p>
+<h4 id="两种区别"><a href="#两种区别" class="headerlink" title="两种区别"></a>两种区别</h4><ul>
+<li>精确度上，Etag要优于Last-Modified。</li>
+<li>性能上，Etag要逊于Last-Modified</li>
+<li>优先级上，服务器校验优先考虑Etag</li>
+</ul>
+<h3 id="缓存机制"><a href="#缓存机制" class="headerlink" title="缓存机制"></a>缓存机制</h3><p>强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存(Last-Modified / If-Modified-Since和Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，返回200，重新返回资源和缓存标识，再存入浏览器缓存中；生效则返回304，继续使用缓存。<br><img src="%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%E6%B5%81%E7%A8%8B.webp"></p>
+<h4 id="如果什么缓存策略都没设置，那么浏览器会怎么处理？"><a href="#如果什么缓存策略都没设置，那么浏览器会怎么处理？" class="headerlink" title="如果什么缓存策略都没设置，那么浏览器会怎么处理？"></a>如果什么缓存策略都没设置，那么浏览器会怎么处理？</h4><p>浏览器会采用一个启发式的算法，通常会取响应头中的 Date 减去 Last-Modified 值的 10% 作为缓存时间。</p>
+<h3 id="实际场景应用缓存策略"><a href="#实际场景应用缓存策略" class="headerlink" title="实际场景应用缓存策略"></a>实际场景应用缓存策略</h3><ul>
+<li>常变动的资源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cache-control: no-cache</span><br><span class="line">配合 ETag 或者 Last-Modified 来验证资源是否有效。这样的做法虽然不能节省请求数量，但是能显著减少响应数据大小。</span><br></pre></td></tr></table></figure></li>
+<li>不常变动的资源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cache-control: max-age&#x3D;31536000</span><br></pre></td></tr></table></figure>
+设置较长过期时间(如1年),<b>这样浏览器之后请求相同的 URL 会命中强制缓存。而为了解决更新的问题，就需要在文件名(或者路径)中添加 hash， 版本号等动态字符，之后更改动态字符，从而达到更改引用 URL 的目的，让之前的强制缓存失效 (其实并未立即失效，只是不再使用了而已)。</b></li>
+</ul>
+<h3 id="用户行为对缓存的影响"><a href="#用户行为对缓存的影响" class="headerlink" title="用户行为对缓存的影响"></a>用户行为对缓存的影响</h3><ul>
+<li>打开网页，地址栏输入地址： 查找 disk cache 中是否有匹配。如有则使用；如没有则发送网络请求。</li>
+<li>普通刷新 (F5)：因为 TAB 并没有关闭，因此 memory cache 是可用的，会被优先使用(如果匹配的话)。其次才是 disk cache。</li>
+<li>强制刷新 (Ctrl + F5)：浏览器不使用缓存，因此发送的请求头部均带有 Cache-control: no-cache(为了兼容，还带了 Pragma: no-cache),服务器直接返回 200 和最新内容。</li>
+</ul>
+<p><img src="%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6.webp"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/web%E7%B3%BB%E5%88%97/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" style="float: left;">
+        ← 前端性能优化
+    </a>
+    
+    
+    <a class="pull-right" href="/%E5%BE%AE%E4%BF%A1%E7%9B%B8%E5%85%B3/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/">
+        公众号开发 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

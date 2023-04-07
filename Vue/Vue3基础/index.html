@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Vue3基础 | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-05-10T05:22:22.000Z" itemprop="datePublished">
+          2021-05-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/vue原理/'>vue原理</a>
+    
+    
+</span>
+                <h1>Vue3基础</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="创建vue3项目"><a href="#创建vue3项目" class="headerlink" title="创建vue3项目"></a>创建vue3项目</h3><ul>
+<li>vue-cli 4.5.0以上<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create vue3-test</span><br><span class="line">选择vue3项目即可</span><br><span class="line">若需创建ts项目及自定义配置项可选Manually select features， 然后按提示操作创建，最后不要保存位默认配置。</span><br></pre></td></tr></table></figure></li>
+<li>创建vite+ts项目<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm create vite@latest</span><br><span class="line">或</span><br><span class="line">yarn create vite</span><br><span class="line">或</span><br><span class="line">pnpm create vite</span><br><span class="line"></span><br><span class="line">注意：node版本要大于14.18，最好16以上</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="初始化工程变化"><a href="#初始化工程变化" class="headerlink" title="初始化工程变化"></a>初始化工程变化</h3><p>main.js变化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不在引入Vue构造函数,而引入createApp工程函数</span></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="comment">// 挂载方式改变</span></span><br><span class="line">createApp(App).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>.vue文件template不在必须要根标签包裹</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- &lt;div&gt; --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- &lt;/div&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="组合式API"><a href="#组合式API" class="headerlink" title="组合式API"></a>组合式API</h3><p>区别于vue2中options api(配置式)形式,如data,methods,computed…等.<br>组合式api统一写在setup函数中.<br><strong><em>setup必须有返回值</em></strong></p>
+<ul>
+<li>返回对象(常用)</li>
+<li>返回render函数</li>
+<li><a href="#suspense">返回promise;(suspense相关)</a><ul>
+<li>只有suspense和动态引入组件时setup才能返回promise,也只有这种情况setup能加async</li>
+</ul>
+</li>
+</ul>
+<p><strong><em>setup执行早于beforeCreate, this为undefine</em></strong></p>
+<p><strong><em>setup的入参:</em></strong></p>
+<ul>
+<li>props: 即组件传参;需要正常定义props才能接收到</li>
+<li>context: 上下文;组件传参,插槽相关<ul>
+<li>attrs 组件传参,没用props接收时,有值</li>
+<li>slots 插槽vnode<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- vue2中具名插槽 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- vue3中具名插槽 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:a</span>&gt;</span><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>emit  自定义事件触发<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件需要接收自定义事件,和props类似</span></span><br><span class="line">props: []</span><br><span class="line">emits: []</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; h &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span> <span class="comment">// setup返回render函数方式,需要引入</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;App&#x27;</span>,</span><br><span class="line">  props: [<span class="string">&#x27;msg&#x27;</span>],</span><br><span class="line">  emits: [<span class="string">&#x27;hello&#x27;</span>], <span class="comment">// 父组件自定义事件也需要接收,否则报警告</span></span><br><span class="line">  setup(props) &#123;</span><br><span class="line">    <span class="keyword">let</span> name = <span class="string">&#x27;victor&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showSomething</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      alert(name)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name,</span><br><span class="line">      showSomething</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// return () =&gt; h(&#x27;h1&#x27;, &#x27;render方式&#x27;)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>vue2配置式api的问题是模块比较分散,不同功能混合,(data中放的所以功能的数据,methods中放的所以功能的方法),分散,不集中.<br>vue3组合式api可通过书写顺序或hooks明显区分功能模块</p>
+</blockquote>
+<h3 id="数据响应式"><a href="#数据响应式" class="headerlink" title="数据响应式"></a>数据响应式</h3><p>setup中直接变量声明方式创建的数据并非响应式.需要</p>
+<ul>
+<li>ref: 处理基本数据类型(引用类型也可)</li>
+<li>reactive: 专门处理引用类型(深层响应)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref, reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">setup () &#123;</span><br><span class="line">    <span class="keyword">let</span> name = ref(<span class="string">&#x27;victor&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> age = ref(<span class="number">18</span>)</span><br><span class="line">    <span class="keyword">let</span> person = ref(&#123;</span><br><span class="line">        name: <span class="string">&#x27;gss&#x27;</span>,</span><br><span class="line">        age: <span class="number">18</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> person_reactive = reactive(&#123;</span><br><span class="line">        name: <span class="string">&#x27;v&#x27;</span>,</span><br><span class="line">        age: <span class="number">20</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">edit</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        name.value = <span class="string">&#x27;gss&#x27;</span></span><br><span class="line">        person.value.name = <span class="string">&#x27;victor&#x27;</span></span><br><span class="line">        person_reactive.name = <span class="string">&#x27;g&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+经过ref函数处理后,数据变为响应式,但需要注意处理后的数据不再是原本类型,而是引用对象(RefImpl);里面包裹原有数据的值在value上;所以需要.value读写.<br>经过reactive函数处理后,数据变为proxy对象,响应式,能直接 . 读取</li>
+</ul>
+<blockquote>
+<p>ref函数实现响应式原理同vue2,Object.defineProperty();<br>但对于对象的内层则是用Proxy实现;实际上是调用了reactive方法实现的.</p>
+</blockquote>
+<p>打印上述person和person.value, person_reactive和person.value一样,如下图<br><img src="ref.png"></p>
+<ul>
+<li>为什么在template模板中不用.value读取数据呢<br>因为complie模板解析时能获取数据类型,RefImpl类型会自动.value</li>
+</ul>
+<h3 id="toRef-amp-toRefs"><a href="#toRef-amp-toRefs" class="headerlink" title="toRef &amp; toRefs"></a>toRef &amp; toRefs</h3><p>将对象的某个属性单独做成响应式,并且保持和原对象的引用关系<br>简化模板插值写法.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;person.name&#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">setup() &#123;</span><br><span class="line">    <span class="keyword">let</span> person = reactive(&#123;</span><br><span class="line">        name: <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        ...</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        person</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//=============================================</span></span><br><span class="line">&lt;p&gt;&#123;&#123;name&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&#123;&#123;job.type&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&#123;&#123;type&#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">setup() &#123;</span><br><span class="line">    <span class="keyword">let</span> person = reactive(&#123;</span><br><span class="line">        name: <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        job: &#123;</span><br><span class="line">            type: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">let</span> type = toRef(person.job, <span class="string">&#x27;type&#x27;</span>)    <span class="comment">// 单独响应某个属性,并且type引用保持在person上,即type变-person.job.type也变</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        ...toRefs(person),  <span class="comment">// 扩展person所有属性,深层响应</span></span><br><span class="line">        type</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="shallowReactive-amp-shallowRef"><a href="#shallowReactive-amp-shallowRef" class="headerlink" title="shallowReactive &amp; shallowRef"></a>shallowReactive &amp; shallowRef</h3><p>shallow: 浅层的<br>shallowReactive: 只响应对象的一层,不深层响应<br>shallowRef: 基础类型同ref, 不响应对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = shallowReactive(&#123;</span><br><span class="line">    a:&#123;</span><br><span class="line">        b:<span class="number">1</span> <span class="comment">// 内层不响应</span></span><br><span class="line">    &#125;,</span><br><span class="line">    c:<span class="number">2</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">let</span> num = shallowRef(<span class="number">18</span>)    <span class="comment">// 同ref</span></span><br><span class="line"><span class="keyword">let</span> obj = shallowRef(&#123;</span><br><span class="line">    a:<span class="number">1</span> <span class="comment">// 不响应</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="readonly-amp-shallowReadonly"><a href="#readonly-amp-shallowReadonly" class="headerlink" title="readonly &amp; shallowReadonly"></a>readonly &amp; shallowReadonly</h3><p>只读和浅层只读</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; readonly, shallowReadonly &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;&#125;</span><br><span class="line">person = readonly(person)</span><br><span class="line">person = shallowReadonly(person)</span><br></pre></td></tr></table></figure>
+
+<h3 id="toRaw-amp-markRow"><a href="#toRaw-amp-markRow" class="headerlink" title="toRaw &amp; markRow"></a>toRaw &amp; markRow</h3><p>还原和标记还原</p>
+<ul>
+<li>toRaw: 将<strong>reactive</strong>响应式数据还原普通数据</li>
+<li>markRow: 响应式数据添加新属性时,也是响应式,用此阻止新属性的响应<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import ...</span></span><br><span class="line"><span class="keyword">let</span> p = reactive(&#123;&#125;)</span><br><span class="line"><span class="keyword">let</span> p_raw = toRaw(p)    <span class="comment">// 还原成原始数据</span></span><br><span class="line"></span><br><span class="line">p.someObj = markRow(&#123;&#125;) <span class="comment">// 新属性someObj将不再响应</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="customRef"><a href="#customRef" class="headerlink" title="customRef"></a>customRef</h3><p>自定义ref,能够通过get,set实现相关逻辑控制</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; customRef &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myCustomData</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> customRef(<span class="function">(<span class="params">track, trigger</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            get() &#123;</span><br><span class="line">                track() <span class="comment">// 跟踪数据变化</span></span><br><span class="line">                <span class="keyword">return</span> value</span><br><span class="line">            &#125;,</span><br><span class="line">            set(newValue) &#123;</span><br><span class="line">                value = newValue</span><br><span class="line">                trigger()   <span class="comment">// 触发数据更新</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="provide-amp-inject"><a href="#provide-amp-inject" class="headerlink" title="provide &amp; inject"></a>provide &amp; inject</h3><p>提供/注入, 实现祖/后代组件传参</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 祖</span></span><br><span class="line"><span class="keyword">import</span> &#123; provide &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">setup() &#123;</span><br><span class="line">    <span class="keyword">let</span> p = &#123;&#125;</span><br><span class="line">    provide(<span class="string">&#x27;p&#x27;</span>, p)</span><br><span class="line">    provide(<span class="string">&#x27;fn&#x27;</span>, <span class="function">(<span class="params">cb</span>) =&gt;</span> &#123;cb()&#125;)   <span class="comment">// 通过回调,获取后代组件中的函数执行</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 后代</span></span><br><span class="line"><span class="keyword">import</span> &#123; inject &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">setup() &#123;</span><br><span class="line">    <span class="keyword">let</span> = inject(<span class="string">&#x27;p&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> fn = inject(<span class="string">&#x27;fn&#x27;</span>)</span><br><span class="line">    fn(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;后代组件相关逻辑,在祖组件中触发执行&#x27;</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断是否响应式数据"><a href="#判断是否响应式数据" class="headerlink" title="判断是否响应式数据"></a>判断是否响应式数据</h3><ul>
+<li>isRef</li>
+<li>isReactive</li>
+<li>isReadonly</li>
+<li>isProxy: 是否是reactive或readonly创建的数据<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import &#123; ... &#125;</span></span><br><span class="line"><span class="keyword">let</span> a = reactive(&#123;&#125;)</span><br><span class="line">isReactive(a)   <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 还原</span></span><br><span class="line"><span class="keyword">let</span> b = toRaw(a)</span><br><span class="line">isReactive(b)   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h3 id="computed-amp-watch-amp-watchEffect"><a href="#computed-amp-watch-amp-watchEffect" class="headerlink" title="computed &amp; watch &amp; watchEffect"></a>computed &amp; watch &amp; watchEffect</h3><p>computed</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; reactive, computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">setup () &#123;</span><br><span class="line">    <span class="keyword">let</span> num = reactive(&#123;</span><br><span class="line">        a: <span class="number">0</span>,</span><br><span class="line">        b: <span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line">    num.c = computed(<span class="function">() =&gt;</span> (num.a + num.b)) <span class="comment">// 方法一</span></span><br><span class="line"></span><br><span class="line">    num.c = computed(&#123; <span class="comment">// 方法二</span></span><br><span class="line">        get() &#123;</span><br><span class="line">            <span class="keyword">return</span> num.a + num.b</span><br><span class="line">        &#125;,</span><br><span class="line">        set() &#123;&#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        num</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>watch &amp; watchEffect</p>
+<blockquote>
+<p>注意引用类型默认deep且不可取消,无法获取oldV</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref, reactive, watch, watchEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">setup () &#123;</span><br><span class="line">    <span class="keyword">let</span> num = reactive(&#123;</span><br><span class="line">        a: <span class="number">0</span>,</span><br><span class="line">        b: <span class="number">0</span>,</span><br><span class="line">        obj: &#123;</span><br><span class="line">            a: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> name = ref(<span class="string">&#x27;victor&#x27;</span>)</span><br><span class="line">    <span class="keyword">let</span> age = <span class="number">18</span></span><br><span class="line">    <span class="comment">// 能多次调用watch函数</span></span><br><span class="line">    watch(name, <span class="function">(<span class="params">newV, oldV</span>) =&gt;</span> &#123;&#125;, &#123; <span class="attr">immediate</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">    watch([name, age], <span class="function">(<span class="params">newV, oldV</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 监听多个</span></span><br><span class="line">        <span class="comment">// newV: [&#x27;victor!&#x27;, 19]</span></span><br><span class="line">        <span class="comment">// oldV: [&#x27;victor&#x27;, 18]</span></span><br><span class="line">    &#125;, &#123; <span class="attr">immediate</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">    watch(num, <span class="function">(<span class="params">newV, oldV</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 引用类型 默认强制 开启deep, deep: false无效</span></span><br><span class="line">        <span class="comment">// 无法获取oldV,oldV和newV一样</span></span><br><span class="line">    &#125;, &#123; <span class="attr">immediate</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">    watch(<span class="function">() =&gt;</span> num.obj.a, <span class="function">(<span class="params">newV, oldV</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 单独监听某个属性,需函数返回值. newV和oldV正常</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    watchEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 不是监听某个值,而是用到谁,监听谁,智能,自动deep</span></span><br><span class="line">        <span class="keyword">let</span> n = name.value  <span class="comment">// 用到了name,此时会走此处监听,n为newV</span></span><br><span class="line">        <span class="keyword">let</span> _num = num.obj.a    <span class="comment">// 能监听到深层</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>vue2中的周期依然能在vue3中使用,除了beforeDestroy和destroyed改名为beforeUnmount和unmounted.<br>vue3中也能用组合式API形式调用.<br>setup中生命周期改动:</p>
+<ul>
+<li>没有明确的beforeCreate和created, setup即相当于这两个周期<ul>
+<li>作为配置项还是能用beforeCreate和created的.</li>
+<li>setup早于beforeCreate</li>
+</ul>
+</li>
+<li>需引入对应周期函数,逻辑在回调函数中写</li>
+<li>周期名都加on<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; onMounted &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">setup() &#123;</span><br><span class="line">    onMounted (<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;onMounted&#x27;</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="自定义hooks"><a href="#自定义hooks" class="headerlink" title="自定义hooks"></a>自定义hooks</h3><p>hook: 一个函数, 是组合式api的封装. 类似vue2中mixin,因为vue3中配置项都是通过函数实现,所以hook非常方便.可以公共把数据操作,方法,包括用到的生命周期都能放到一个hook文件中.<br>步骤:</p>
+<ul>
+<li>创建hooks文件夹</li>
+<li>创建相关文件,命名一般以use开头(useSomething.js)</li>
+<li>编写hook文件,暴露带有返回值的函数.</li>
+<li>使用hook文件,引入-setup中调用即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hooks/useSomething.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; ref, onMounted &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> hookName = ref(<span class="string">&#x27;victor&#x27;</span>)    <span class="comment">// 定义数据</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> getHookName = <span class="function">() =&gt;</span> &#123;     <span class="comment">// 定义方法</span></span><br><span class="line">        hookName.value += <span class="string">&#x27;!&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    onMounted(<span class="function">() =&gt;</span> &#123;               <span class="comment">// 生命周期可用</span></span><br><span class="line">        hookName.value += <span class="string">&#x27;!&#x27;</span>       <span class="comment">// 数据能响应式</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123;hookName, getHookName&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// app.vue</span></span><br><span class="line"><span class="keyword">import</span> useSomething <span class="keyword">from</span> <span class="string">&#x27;./hooks/useSomething&#x27;</span></span><br><span class="line">setup() &#123;</span><br><span class="line">    <span class="keyword">let</span> &#123; hookName, getHookName &#125; = useSomething()</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        hookName,</span><br><span class="line">        getHookName</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="新组件"><a href="#新组件" class="headerlink" title="新组件"></a>新组件</h3><ul>
+<li>fragment: 内置组件,不用手写,自动渲染处理,组件内不用div包裹的原因.没有外层div时就自动用fragment了</li>
+<li>teleport: 传送,将html结构传送到指定标签<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- to: css选择器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;body&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dialog</span>&gt;</span>...<span class="tag">&lt;/<span class="name">dialog</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">teleport</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 将全局弹框传送到body,减少对结构的影响 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><a id="suspense">suspense</a>: 试验阶段,结合动态引入组件使用;基于插槽实现;可用于加loading状态;<ul>
+<li>default插槽</li>
+<li>fallback插槽<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">&lt;suspense&gt;</span><br><span class="line">    &lt;template v-slot:<span class="keyword">default</span>&gt;   <span class="comment">// 默认插槽</span></span><br><span class="line">        &lt;helloWord&gt;&lt;/helloWord&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">    &lt;template v-slot:fallback&gt;  <span class="comment">// 备案插槽</span></span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        loading</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">&lt;/suspense&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; defineAsyncComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>  <span class="comment">// 引入异步加载组件方法</span></span><br><span class="line"><span class="keyword">const</span> helloWord = defineAsyncComponent(<span class="function">() =&gt;</span> (<span class="keyword">import</span>(<span class="string">&#x27;./helloWord&#x27;</span>)))   <span class="comment">// 引入组件</span></span><br><span class="line"></span><br><span class="line">components:&#123;</span><br><span class="line">    helloWord</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// helloWord组件</span></span><br><span class="line"><span class="keyword">async</span> setup() &#123; <span class="comment">// 确定组件被动态引入并且用suspense时,可用async</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    cosnt p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        resolve(&#123;</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> p    <span class="comment">// 确定组件被动态引入并且用suspense时,可返回promise</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他改变"><a href="#其他改变" class="headerlink" title="其他改变"></a>其他改变</h3><ul>
+<li>全局api<ul>
+<li>const app = createApp()<br><img src="api.png"></li>
+</ul>
+</li>
+<li>过度(transition)类名改变</li>
+<li>移除keyCode按键编码</li>
+<li>移除.native修饰符<ul>
+<li>因为现在子组件组定义事件也需要接收,所以当子组件接收click时就算自定义事件,不接收时就算原生事件,不需要再用.native修饰</li>
+</ul>
+</li>
+<li>移除filter: 建议用计算属性</li>
+</ul>
+<hr>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h3><p><a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/introduction.html">官方文档</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/Js%E6%B7%B1%E5%85%A5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="float: left;">
+        ← 设计模式
+    </a>
+    
+    
+    <a class="pull-right" href="/Vue/Vuex%E5%8E%9F%E7%90%86/">
+        Vuex原理 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

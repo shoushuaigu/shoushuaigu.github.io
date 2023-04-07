@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>小程序开发 | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-02-19T08:00:59.000Z" itemprop="datePublished">
+          2021-02-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/小程序/'>小程序</a>
+    
+    
+</span>
+                <h1>小程序开发</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="面试常见"><a href="#面试常见" class="headerlink" title="面试常见"></a>面试常见</h2><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><ul>
+<li>小程序app生命周期（app.js）<ul>
+<li>onLaunch  小程序初始化完成时触发；同wx.getLaunchOptionsSync()；参数包括：<ul>
+<li>path  小程序路径</li>
+<li>scene 场景值</li>
+<li>query 启动参数</li>
+<li>其他的一些来源信息</li>
+</ul>
+</li>
+<li>onShow    小程序启动或从后台切入前台显示触发；同wx.onAppShow()绑定监听；参数同上</li>
+<li>onHide    小程序从前台进入后台时触发；同wx.onAppHide()；参数同上</li>
+</ul>
+</li>
+<li>小程序页面生命周期<ul>
+<li>onLoad(options)    页面加载时触发；可获取当前页面路径参数<ul>
+<li>options</li>
+</ul>
+</li>
+<li>onShow    页面显示或切入前台时触发</li>
+<li>onReady   页面初次渲染完成时触发；可以和视图层进行交互</li>
+<li>onHide    页面隐藏/切入后台时触发</li>
+<li>onUnload  页面卸载时触发</li>
+<li>onRouteDone   路由动画完成时触发</li>
+</ul>
+</li>
+<li>组件生命周期<ul>
+<li>lifetimes 组件生命周期<ul>
+<li>created   组件实例刚刚被创建时</li>
+<li>attached  组件实例进入页面节点树时</li>
+<li>ready     组件在视图层布局完成后</li>
+<li>moved     组件实例被移动到节点树另一个位置时</li>
+<li>detached  组件实例被从页面节点树移除时</li>
+<li>error     每当组件方法抛出错误时</li>
+</ul>
+</li>
+<li>pageLifetimes 组件所在页面生命周期<ul>
+<li>show  组件所在的页面被展示时</li>
+<li>hide</li>
+<li>resize</li>
+<li>routeDone<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Component(&#123;</span><br><span class="line">    lifetimes: &#123;</span><br><span class="line">        attached: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 在组件实例进入页面节点树时执行</span></span><br><span class="line">        &#125;,</span><br><span class="line">        detached: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 在组件实例被从页面节点树移除时执行</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    pageLifetimes: &#123;</span><br><span class="line">        show: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 页面被展示</span></span><br><span class="line">        &#125;,</span><br><span class="line">        hide: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 页面被隐藏</span></span><br><span class="line">        &#125;,</span><br><span class="line">        resize: <span class="function"><span class="keyword">function</span>(<span class="params">size</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 页面尺寸变化</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h3><ul>
+<li>wx.switchTab()    跳转tabBar页面, 其他跳转不能跳转tabBar页</li>
+<li>wx.reLaunch()     关闭所有页面，跳转应用内某个页面</li>
+<li>wx.redirectTo()   关闭当前页，跳转应用内其他页</li>
+<li>wx.navigateTo()   保留当前页面，跳转应用内其他页。使用 wx.navigateBack 可以返回到原页面。小程序中页面栈最多十层。</li>
+<li>wx.navigateBack() 关闭当前页，返回上级或多级页</li>
+</ul>
+<h3 id="页面传参"><a href="#页面传参" class="headerlink" title="页面传参"></a>页面传参</h3><ul>
+<li>globalData 全局变量  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line">App(&#123;</span><br><span class="line">    globalData: &#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"><span class="comment">//app.globalData</span></span><br></pre></td></tr></table></figure></li>
+<li>stroage</li>
+<li>路由地址传参  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 上述跳转方式都能传参</span></span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">&#x27;/a?id=1&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 在onload中获取路由传参</span></span><br><span class="line">Page(&#123;</span><br><span class="line">    onLoad(options) &#123;</span><br><span class="line">        <span class="comment">//options.id</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>事件通道: 双向通信  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// wx.navigate()独有，通过自定义事件 emit和on 触发和监听事件</span></span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">&#x27;test?id=1&#x27;</span>,</span><br><span class="line">    events: &#123;</span><br><span class="line">        <span class="comment">// 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据</span></span><br><span class="line">        someEvent: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123; <span class="comment">// someEvent 自定义事件名称</span></span><br><span class="line">            <span class="built_in">console</span>.log(data)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 通过eventChannel向被打开页面传送数据</span></span><br><span class="line">        res.eventChannel.emit(<span class="string">&#x27;sendSomThing&#x27;</span>, &#123; <span class="attr">data</span>: <span class="string">&#x27;test&#x27;</span> &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">    onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">option</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(option.query)</span><br><span class="line">        <span class="keyword">const</span> eventChannel = <span class="built_in">this</span>.getOpenerEventChannel()   <span class="comment">// 获取事件通道</span></span><br><span class="line">        eventChannel.emit(<span class="string">&#x27;someEvent&#x27;</span>, &#123;<span class="attr">data</span>: <span class="string">&#x27;test&#x27;</span>&#125;);</span><br><span class="line">        <span class="comment">// 监听sendSomThing事件，获取上一页面通过eventChannel传送到当前页面的数据</span></span><br><span class="line">        eventChannel.on(<span class="string">&#x27;sendSomThing&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(data)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>页面栈：页面栈最多十层  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取当前页面栈</span></span><br><span class="line"><span class="keyword">const</span> pages = getCurrentPages();</span><br><span class="line"><span class="comment">//获取上一页面对象</span></span><br><span class="line"><span class="keyword">let</span> prePage = pages[pages.length - <span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(prePage.data.name) <span class="comment">// 上一页中的数据</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="组件间传参"><a href="#组件间传参" class="headerlink" title="组件间传参"></a>组件间传参</h3><ul>
+<li>dataset</li>
+<li>properties    == props</li>
+<li>triggerEvent  == $emit</li>
+</ul>
+<h3 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; baseUrl &#125; <span class="keyword">from</span> <span class="string">&#x27;./http.js&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * url:请求的接口地址</span></span><br><span class="line"><span class="comment"> * methodType:请求方式</span></span><br><span class="line"><span class="comment"> * data: 要传递的参数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">  request : <span class="function"><span class="keyword">function</span>(<span class="params">url, methodType, data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> fullUrl = <span class="string">`<span class="subst">$&#123;baseUrl&#125;</span><span class="subst">$&#123;url&#125;</span>`</span></span><br><span class="line">    <span class="keyword">let</span> token = wx.getStorageSync(<span class="string">&#x27;token&#x27;</span>) ? wx.getStorageSync(<span class="string">&#x27;token&#x27;</span>)  : <span class="string">&#x27;&#x27;</span></span><br><span class="line">    wx.showLoading(&#123; <span class="attr">title</span>: <span class="string">&quot;加载中&quot;</span>  &#125;);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">      wx.request(&#123;</span><br><span class="line">        url: fullUrl,</span><br><span class="line">        method:methodType,</span><br><span class="line">        data,</span><br><span class="line">        header: &#123;</span><br><span class="line">          <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>, <span class="comment">// 默认值</span></span><br><span class="line">          <span class="string">&#x27;x-api-key&#x27;</span>: token,</span><br><span class="line">        &#125;,</span><br><span class="line">        success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (res.data.status == <span class="number">200</span>) &#123;</span><br><span class="line">            resolve(res.data)</span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">              title: res.data.msg,</span><br><span class="line">              icon:<span class="string">&#x27;none&#x27;</span></span><br><span class="line">            &#125;)</span><br><span class="line">            reject(res.data.message)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          wx.showToast(&#123;</span><br><span class="line">            title: <span class="string">&#x27;接口请求错误&#x27;</span>,</span><br><span class="line">            icon:<span class="string">&#x27;none&#x27;</span></span><br><span class="line">          &#125;)</span><br><span class="line">          reject(<span class="string">&#x27;接口请求错误&#x27;</span>)</span><br><span class="line">        &#125;,</span><br><span class="line">        complete: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            wx.hideLoading()</span><br><span class="line">          &#125;, <span class="number">100</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="优化启动加载速度"><a href="#优化启动加载速度" class="headerlink" title="优化启动加载速度"></a>优化启动加载速度</h3><ul>
+<li>减小默认data大小<ul>
+<li>小程序新开页面时会深拷贝page对象，所以数据量大的话会影响速度</li>
+</ul>
+</li>
+<li>分包加载<ul>
+<li>在app.json中preloadRule字段配置，预加载实现加速</li>
+</ul>
+</li>
+<li>压缩代码</li>
+<li>减少图片等资源或压缩大小</li>
+<li>及时清理无用资源、代码</li>
+<li>组件化一定程度也能提高速度</li>
+</ul>
+<h3 id="webview"><a href="#webview" class="headerlink" title="webview"></a>webview</h3><ul>
+<li>需后台配置合法业务域名才能加载</li>
+<li>网页使用微信JSSDK 1.3.2以上提供返回小程序接口<ul>
+<li>wx.miniProgram.navigateTo 参数和小程序里跳转一样</li>
+<li>。。。其他跳转方法和小程序里一样</li>
+</ul>
+</li>
+<li>webview环境下JSSDK部分接口能用，不是全部能用</li>
+</ul>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
+<li><p>冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递。</p>
+<ul>
+<li>用bind绑定事件<ul>
+<li>bindtap</li>
+<li>bindtouchstart</li>
+<li>bindtouch…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。</p>
+<ul>
+<li>catch绑定事件<ul>
+<li>catchtap</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="双向绑定"><a href="#双向绑定" class="headerlink" title="双向绑定"></a>双向绑定</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">model:value</span>=<span class="string">&quot;&#123;&#123;value&#125;&#125;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义组件中双向绑定</span></span><br><span class="line"><span class="comment">// custom-component.js</span></span><br><span class="line">Component(&#123;</span><br><span class="line">  properties: &#123;</span><br><span class="line">    myValue: <span class="built_in">String</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// &lt;!-- custom-component.wxml --&gt;</span></span><br><span class="line">&lt;input model:value=<span class="string">&quot;&#123;&#123;myValue&#125;&#125;&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;custom-component model:my-value=<span class="string">&quot;&#123;&#123;pageValue&#125;&#125;&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="授权认证过程"><a href="#授权认证过程" class="headerlink" title="授权认证过程"></a>授权认证过程</h3><p><img src="0.jpg"></p>
+<h3 id="支付实现"><a href="#支付实现" class="headerlink" title="支付实现"></a>支付实现</h3><ul>
+<li>小程序注册，要以公司的身份去注册一个小程序，才有微信支付权限</li>
+<li>绑定商户号</li>
+<li>在小程序填写合法域</li>
+<li>调用wx.login()获取appid</li>
+<li>调用wx.requestPayment()</li>
+</ul>
+<h3 id="文件描述"><a href="#文件描述" class="headerlink" title="文件描述"></a>文件描述</h3><ul>
+<li>app.json<ul>
+<li>当前小程序的全局配置，包括所有页面路径、界面表现、网络超时时间、底部 tab 、组件注册等。</li>
+</ul>
+</li>
+<li>project.config.json<ul>
+<li>开发者工具配置文件</li>
+</ul>
+</li>
+<li>sitemap.json<ul>
+<li>小程序内搜索配置</li>
+</ul>
+</li>
+</ul>
+<h3 id="发布流程"><a href="#发布流程" class="headerlink" title="发布流程"></a>发布流程</h3><ul>
+<li>注册微信小程序账号</li>
+<li>获取微信小程序的AppID</li>
+<li>下载微信小程序开发者工具</li>
+<li>创建demo项目</li>
+<li>去微信公众号配置域名</li>
+<li>手机浏览</li>
+<li>代码上传</li>
+<li>提交审核</li>
+<li>小程序发布</li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/%E5%BE%AE%E4%BF%A1%E7%9B%B8%E5%85%B3/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" style="float: left;">
+        ← 公众号开发
+    </a>
+    
+    
+    <a class="pull-right" href="/NodeJs/nodeJs/">
+        nodeJs →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

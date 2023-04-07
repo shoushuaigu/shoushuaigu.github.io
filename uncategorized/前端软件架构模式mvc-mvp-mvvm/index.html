@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>前端软件架构模式mvc/mvp/mvvm | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2023-03-06T07:39:28.000Z" itemprop="datePublished">
+          2023-03-06
+      </time>
+    
+    
+    | 
+    <a href='/tags/web/'>web</a>
+    
+    
+</span>
+                <h1>前端软件架构模式mvc/mvp/mvvm</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>MVC，MVP和MVVM都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。<br>要了解MVC、MVP和MVVM，就要知道它们的相同点和不同点。不同部分是C(Controller)、P(Presenter)、VM(View-Model)，而相同的部分则是MV(Model-View)。</p>
+<ul>
+<li>m: 模型（Model）</li>
+<li>v: 视图（View）</li>
+<li>c: 控制器（Controller）接收v的事件，改变m</li>
+<li>p: View和Model之间的“中间人”,需手动更新</li>
+<li>vm: 替换P,实现自动更新</li>
+</ul>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><p>MVC模式（Model–view–controller）: 是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。</p>
+<h4 id="数据关系"><a href="#数据关系" class="headerlink" title="数据关系"></a>数据关系</h4><ul>
+<li>View 接受用户交互请求</li>
+<li>View 将请求转交给Controller</li>
+<li>Controller 操作Model进行数据更新</li>
+<li>数据更新之后，Model通知View更新数据变化。PS: 还有一种是View作为Observer监听Model中的任意更新，一旦有更新事件发出，View会自动触发更新以展示最新的Model状态。这种方式提升了整体效率，简化了Controller的功能，不过也导致了View与Model之间的紧耦合。</li>
+<li>View 更新变化数据</li>
+</ul>
+<h4 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h4><p><img src="mvc1.webp"><br><img src="mvc2.webp"><br><img src="mvc3.webp"><br>Model和View可能有耦合，即MVC仅仅将应用抽象，并未限制数据流。</p>
+<hr>
+<h3 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h3><p>MVP（Model-View-Presenter）是MVC模式的改良。MVP与MVC有着一个重大的区别：在MVP中View并不直接使用Model，它们之间的通信是通过Presenter (MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会直接从Model中读取数据而不是通过 Controller。</p>
+<h4 id="数据关系-1"><a href="#数据关系-1" class="headerlink" title="数据关系"></a>数据关系</h4><ul>
+<li>View 接收用户交互请求</li>
+<li>View 将请求转交给 Presenter</li>
+<li>Presenter 操作Model进行数据更新</li>
+<li>Model 通知Presenter数据发生变化</li>
+<li>Presenter 更新View数据</li>
+</ul>
+<h4 id="数据流-1"><a href="#数据流-1" class="headerlink" title="数据流"></a>数据流</h4><p><img src="mvp.webp"></p>
+<p>MVP模式限制了Model和View之间通信，让Model和View解耦更彻底，代码更容易被复用。MVP模式也有问题，它的问题在于Presenter的负担很重，Presenter需要知道View和Model的结构，并且在Model变化时候需要手动操作View，增加编码负担，降低代码维护性。</p>
+<hr>
+<h4 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h4><p>MVVM(Model-View-ViewModel) 在 MVVM 中，不需要Presenter手动地同步View和Model。View 是通过数据驱动的，Model一旦改变就会相应的刷新对应的 View，View 如果改变，也会改变对应的Model。这种方式就可以在业务处理中只关心数据的流转，而无需直接和页面打交道。ViewModel 只关心数据和业务的处理，不关心 View 如何处理数据，在这种情况下，View 和 Model 都可以独立出来，任何一方改变了也不一定需要改变另一方，并且可以将一些可复用的逻辑放在一个 ViewModel 中，让多个 View 复用这个 ViewModel。</p>
+<h4 id="数据关系-2"><a href="#数据关系-2" class="headerlink" title="数据关系"></a>数据关系</h4><ul>
+<li>View 接收用户交互请求</li>
+<li>View 将请求转交给ViewModel</li>
+<li>ViewModel 操作Model数据更新</li>
+<li>Model 更新完数据，通知ViewModel数据发生变化</li>
+<li>ViewModel 更新View数据</li>
+</ul>
+<h4 id="数据流-2"><a href="#数据流-2" class="headerlink" title="数据流"></a>数据流</h4><p><img src="mvvm.webp"></p>
+<p>从上面对MVC、MVP、MVVM的描述可以看出，它们是递进关系，不断优化的：MVC中Model和View还有一定程度的耦合，而在MVP和MVVM中View和Model彻底分离，View和Model不知道彼此的存在，View和Model只向外暴露方法让Presenter调用；MVVM通过自动同步数据更新到视图，解决了MVP中手动同步的痛点，简化了代码。</p>
+<hr>
+<h3 id="区别总结"><a href="#区别总结" class="headerlink" title="区别总结"></a>区别总结</h3><blockquote>
+<p>MVVM是一种软件架构设计模式，它抽离了视图、数据和逻辑，并限定了Model和View只能通过VM进行通信，VM订阅Model并在数据更新时候自动同步到视图。<br>MVC将应用抽象为数据层（Model）、视图层（View）、逻辑层（controller），降低了项目耦合。但MVC并未限制数据流，Model和View之间可以通信。<br>MVP则限制了Model和View的交互都要通过Presenter，这样对Model和View解耦，提升项目维护性和模块复用性。<br>而MVVM是对MVP的P的改造，用VM替换P，将很多手动的数据=&gt;视图的同步操作自动化，降低了代码复杂度，提升可维护性。</p>
+</blockquote>
+<h3 id="写法示例"><a href="#写法示例" class="headerlink" title="写法示例"></a>写法示例</h3><h4 id="1、原生"><a href="#1、原生" class="headerlink" title="1、原生"></a>1、原生</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>origin<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;root&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;origin.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// origin.js</span></span><br><span class="line"><span class="keyword">var</span> isShow = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> modal = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> switchButton = <span class="built_in">document</span>.createElement(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">switchButton.innerText = <span class="string">&#x27;关&#x27;</span>;</span><br><span class="line">switchButton.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (isShow) &#123;</span><br><span class="line">    switchButton.innerText = <span class="string">&#x27;开&#x27;</span>;</span><br><span class="line">    isShow = <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">    switchButton.innerText = <span class="string">&#x27;关&#x27;</span>;</span><br><span class="line">    isShow = <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">modal.appendChild(switchButton);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>).appendChild(modal);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、MVC"><a href="#2、MVC" class="headerlink" title="2、MVC"></a>2、MVC</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mvc.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">View</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(controller) &#123;</span><br><span class="line">        <span class="built_in">this</span>.controller = controller;</span><br><span class="line">    &#125;</span><br><span class="line">    render(model) &#123;</span><br><span class="line">        <span class="keyword">const</span> button = <span class="built_in">document</span>.createElement(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">        <span class="keyword">const</span> isOpen = model.getState().isOpen;</span><br><span class="line">        button.innerText = isOpen ? <span class="string">&#x27;关&#x27;</span> : <span class="string">&#x27;开&#x27;</span>;</span><br><span class="line">        button.onclick = <span class="built_in">this</span>.controller.switch;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">        root.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        root.appendChild(button);</span><br><span class="line">        <span class="keyword">return</span> button;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Model</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        isOpen: <span class="literal">false</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    _views = [];</span><br><span class="line"></span><br><span class="line">    getState() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.state;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    register(view) &#123;</span><br><span class="line">        <span class="built_in">this</span>._views.push(view);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span>() &#123;</span><br><span class="line">        <span class="built_in">this</span>._update(&#123;</span><br><span class="line">            isOpen: !<span class="built_in">this</span>.state.isOpen</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    _update(data) &#123;</span><br><span class="line">        <span class="built_in">Object</span>.assign(<span class="built_in">this</span>.state, data);</span><br><span class="line">        <span class="built_in">this</span>._notify();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    _notify() &#123;</span><br><span class="line">        <span class="built_in">this</span>._views.forEach(<span class="function"><span class="params">view</span> =&gt;</span> view.render(<span class="built_in">this</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Controller</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="built_in">this</span>._view = <span class="keyword">new</span> View(<span class="built_in">this</span>);</span><br><span class="line">        <span class="built_in">this</span>._model = <span class="keyword">new</span> Model();</span><br><span class="line">        <span class="built_in">this</span>._model.register(<span class="built_in">this</span>._view);</span><br><span class="line">        <span class="built_in">this</span>._view.render(<span class="built_in">this</span>._model);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">switch</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>._model.switch();</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;switch!!!&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> controller = <span class="keyword">new</span> Controller();</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、MVP"><a href="#3、MVP" class="headerlink" title="3、MVP"></a>3、MVP</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mvp.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">View</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(presenter) &#123;</span><br><span class="line">    <span class="built_in">this</span>.presenter = presenter;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// view不需要关注model的数据结构，只关注自己需要的数据</span></span><br><span class="line">  <span class="comment">// 这样也不会存在view使用了model的其他数据的情况</span></span><br><span class="line">  render(&#123;isOpen&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> button = <span class="built_in">document</span>.createElement(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">    button.innerText = isOpen ? <span class="string">&#x27;关&#x27;</span> : <span class="string">&#x27;开&#x27;</span>;</span><br><span class="line">    button.onclick = <span class="built_in">this</span>.presenter.switch;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">    root.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    root.appendChild(button);</span><br><span class="line">    <span class="keyword">return</span> button;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// model不需要在数据更新时候触发视图更新，只负责数据存储</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Model</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    isOpen: <span class="literal">false</span></span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">  getState() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.state;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">switch</span>() &#123;</span><br><span class="line">    <span class="built_in">this</span>.state.isOpen = !<span class="built_in">this</span>.state.isOpen;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// persenter需要知道m和v的结构，并且要在数据改变时候更新视图，还要处理所有的交互逻辑</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Presenter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="built_in">this</span>._view = <span class="keyword">new</span> View(<span class="built_in">this</span>);</span><br><span class="line">    <span class="built_in">this</span>._model = <span class="keyword">new</span> Model();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> &#123;isOpen&#125; = <span class="built_in">this</span>._model.getState();</span><br><span class="line">    <span class="built_in">this</span>._view.render(&#123;isOpen&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">switch</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>._model.switch();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> &#123;isOpen&#125; = <span class="built_in">this</span>._model.getState();</span><br><span class="line">    <span class="built_in">this</span>._view.render(&#123;isOpen&#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;switch!!!&#x27;</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> presenter = <span class="keyword">new</span> Presenter();</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="4、MVVM"><a href="#4、MVVM" class="headerlink" title="4、MVVM"></a>4、MVVM</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mvvm.js</span></span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#root&#x27;</span>,</span><br><span class="line">    template: <span class="string">`&lt;button @click=&quot;onSwitch()&quot;&gt;&#123;&#123;isOpen ? &#x27;关&#x27; : &#x27;开&#x27;&#125;&#125;&lt;/button&gt;`</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        isOpen: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        onSwitch() &#123;</span><br><span class="line">            <span class="built_in">this</span>.isOpen = !<span class="built_in">this</span>.isOpen;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/uncategorized/%E5%89%8D%E7%AB%AF%E9%89%B4%E6%9D%83/" style="float: left;">
+        ← 前端鉴权
+    </a>
+    
+    
+    <a class="pull-right" href="/%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/MySql%E5%92%8CNavicat%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+        MySql和Navicat安装使用 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

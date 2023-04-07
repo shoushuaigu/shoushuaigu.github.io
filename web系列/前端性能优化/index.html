@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>前端性能优化 | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-03-08T05:05:44.000Z" itemprop="datePublished">
+          2021-03-08
+      </time>
+    
+    
+    | 
+    <a href='/tags/web/'>web</a>,
+    
+    <a href='/tags/优化/'>优化</a>
+    
+    
+</span>
+                <h1>前端性能优化</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>首先明确从输入url到页面渲染完成中间发生了什么:<br>DNS解析(获取ip)–&gt;建立TCP链接(三次握手)–&gt;http请求–&gt;返回响应资源数据—&gt;客户端解析渲染</p>
+<p>从每个阶段分析,逐步优化</p>
+<h4 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h4><p>DNS 实现域名到IP的映射。通过域名访问站点，每次请求都要做DNS解析。目前每次DNS解析，通常在200ms以下。</p>
+<ol>
+<li>减少DNS查找,合理分配资源在cdn(域名)上</li>
+<li>DNS预获取,perfetch提前解析可能即将访问的资源<blockquote>
+<p>浏览器会自动对a标签href预获取,所以不需手动设置,但在https中需设置meta强制开启才起作用。这个限制的原因是防止窃听者根据DNS Prefetching推断出显示在HTTPS页面中超链接的主机名。</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;x-dns-prefetch-control&quot;</span> <span class="attr">content</span>=<span class="string">&quot;on&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="/web%E7%B3%BB%E5%88%97/%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8A%A0%E8%BD%BD">关于预获取预加载</a></p>
+<h4 id="TCP优化"><a href="#TCP优化" class="headerlink" title="TCP优化"></a>TCP优化</h4><p>主要目的是减少TCP链接次数,即减少http请求</p>
+<ol>
+<li>使用长连接<ul>
+<li>http头中Connection:keep-alive</li>
+</ul>
+</li>
+<li>使用http2.0<ul>
+<li>复用TCP通道</li>
+<li>压缩报头</li>
+<li>采用二进制格式而非文本格式</li>
+<li>支持cache push(server push)</li>
+</ul>
+</li>
+</ol>
+<h4 id="http优化"><a href="#http优化" class="headerlink" title="http优化"></a>http优化</h4><ol>
+<li>利用cdn内容分发网络<ul>
+<li>基于端口跟线程切换开销，浏览器不可能无限的并发请求。chrome的并发为6(同一域名中)，超过限制数目的请求就会被阻塞</li>
+<li>将静态资源(js,css,image…)缓存在离用户近的运营商网络cdn节点,提高响应速度,降低带宽、负载消耗</li>
+</ul>
+</li>
+<li><u><a href="/web%E7%B3%BB%E5%88%97/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98">浏览器缓存</a></u><ul>
+<li>强缓存</li>
+<li>协商缓存</li>
+</ul>
+</li>
+<li>合并http请求</li>
+</ol>
+<h4 id="响应资源优化"><a href="#响应资源优化" class="headerlink" title="响应资源优化"></a>响应资源优化</h4><ol>
+<li>资源压缩合并<ul>
+<li>html,css压缩</li>
+<li>js压缩混乱</li>
+<li>文件合并</li>
+</ul>
+</li>
+<li>css背景精灵图</li>
+<li>图片优化<br> <img src="%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96.webp"></li>
+<li>使用字体图标</li>
+</ol>
+<h4 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h4><p><a href="/web%E7%B3%BB%E5%88%97/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86%E4%B8%8E%E6%B5%81%E7%A8%8B">浏览器渲染原理与流程</a></p>
+<ol>
+<li>控制加载顺序<ul>
+<li>css在前,js在后</li>
+<li>preload预加载(<U><a href="/web%E7%B3%BB%E5%88%97/%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8A%A0%E8%BD%BD">关于预获取预加载</a></u>)</li>
+<li>动态加载js:用到时再通过代码加载js</li>
+</ul>
+</li>
+<li>异步/延迟加载<ul>
+<li>async(加载不阻塞,执行阻塞) 非核心代码异步加载,加载完就执行，不保证顺序</li>
+<li>defer(加载异步不阻塞,执行推迟) 解析完才执行，保证顺序</li>
+</ul>
+</li>
+<li>服务端渲染<br>有利于SEO,服务端将整个html渲染好返回给客户端<ul>
+<li>SEO :可以有“现成的内容”拿给搜索引擎看</li>
+<li>⾸屏加载速度:服务端渲染模式下，服务器给到客户端的已经是⼀个服务端处理好的可以拿来呈现给⽤户的⽹⻚</li>
+<li>缺点: ⾮常吃硬件资源</li>
+</ul>
+</li>
+<li>减少重排(回流)重绘<ul>
+<li>重排: 改变 DOM 元素位置或大小时，会导致浏览器重新生成渲染树，这个过程叫重排。</li>
+<li>重绘: 渲染树每个节点绘制到屏幕，这个过程叫重绘(重绘不一定重排,如变字体颜色)</li>
+<li>用 JavaScript 修改样式时，最好不要直接写样式，而是替换 class 来改变样式</li>
+<li>如果要对 DOM 元素执行一系列操作，可以将 DOM 元素脱离文档流，修改完成后，再将它带回文档。推荐使用隐藏元素（display:none）或文档碎片（DocumentFragement）</li>
+</ul>
+</li>
+<li>图片懒加载<ul>
+<li>将img标签src指向一张小图片，然后定义data-src自定义属性指向真实的图片,当载入页面时，先把可视区域内的img标签的data-src属性值赋给src，然后监听滚动事件，把用户即将看到的图片加载</li>
+<li>src不能为空,否则会多次发起请求</li>
+</ul>
+</li>
+<li>节流/防抖<ul>
+<li>节流: 规定时间内只执行一次函数,滚动事件中,规定事件内不触发逻辑方法<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn， delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> prevTime = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> curTime = <span class="built_in">Date</span>.now();</span><br><span class="line">        <span class="keyword">if</span> (curTime - prevTime &gt; delay) &#123;</span><br><span class="line">        fn.apply(<span class="built_in">this</span>， <span class="built_in">arguments</span>);</span><br><span class="line">        prevTime = curTime;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 定时器版</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, delay = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">args</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> that = <span class="built_in">this</span></span><br><span class="line">        <span class="keyword">let</span> _args = args</span><br><span class="line">        <span class="keyword">if</span>(!timer) &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 定时器回调函数中this指向window，所以下边需要固定this指向（或者改为箭头函数）</span></span><br><span class="line">                fn.call(that, _args)</span><br><span class="line">                timer = <span class="literal">null</span></span><br><span class="line">            &#125;, delay)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="keyword">var</span> throtteScroll = throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;throtte&#x27;</span>);</span><br><span class="line">&#125;， <span class="number">1000</span>);</span><br><span class="line"><span class="built_in">window</span>.onscroll = throtteScroll;</span><br></pre></td></tr></table></figure></li>
+<li>防抖: 搜索框实时搜索,每次定时器清除重计,保证输入完规定时间后请求一次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay = <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(fn.timer)</span><br><span class="line">        fn.timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fn.call(<span class="built_in">this</span>, args)</span><br><span class="line">        &#125;, delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="VUE相关优化"><a href="#VUE相关优化" class="headerlink" title="VUE相关优化"></a>VUE相关优化</h4><ul>
+<li>不必要的文件不打包到生产(mock,console等)</li>
+<li>提取css为单独文件</li>
+<li>利用Object.freeze()提升性能<ul>
+<li>一个普通的 JS 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用Object.defineProperty 把这些属性全部转为 getter/setter，但 Vue 在遇到像 Object.freeze() 这样被设置为不可配置之后的对象属性时，不会为对象加上 setter getter 等数据劫持的方法。</li>
+</ul>
+</li>
+<li>路由组件懒加载</li>
+<li>ui库按需加载</li>
+</ul>
+<h4 id="编码方面优化"><a href="#编码方面优化" class="headerlink" title="编码方面优化"></a>编码方面优化</h4><ul>
+<li>if,switch的选择</li>
+<li>v-if,v-show</li>
+<li>组件化</li>
+<li>封装</li>
+<li>各种循环的性能比较</li>
+<li>尽量避免闭包</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sanlingwu/article/details/89245185">关于前端性能的优化（总结）</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/115047733">前端性能优化小结（面试干货）</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/121056616">前端性能优化 24 条建议</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/web%E7%B3%BB%E5%88%97/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98ServiceWorker/" style="float: left;">
+        ← 浏览器缓存ServiceWorker
+    </a>
+    
+    
+    <a class="pull-right" href="/web%E7%B3%BB%E5%88%97/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/">
+        浏览器缓存 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

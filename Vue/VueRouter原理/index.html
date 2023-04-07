@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>VueRouter原理 | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-05-10T05:19:18.000Z" itemprop="datePublished">
+          2021-05-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/vue原理/'>vue原理</a>
+    
+    
+</span>
+                <h1>VueRouter原理</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><p>路由概念最早出现在后端</p>
+<h5 id="后端路由"><a href="#后端路由" class="headerlink" title="后端路由"></a>后端路由</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.xxx.com&#x2F;login</span><br></pre></td></tr></table></figure>
+<ul>
+<li>浏览器发出请求</li>
+<li>服务器监听端口请求,解析url路径</li>
+<li>根据服务器的路由配置,返回相应信息</li>
+<li>浏览器根据数据包的content-type决定怎么解析数据</li>
+</ul>
+<p>简单来说,路由就是用来跟后端的一种交互方式,通过不同路径,请求不同资源.</p>
+<h5 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h5><ul>
+<li><p>hash模式<br>随着ajax的流行,页面异步请求交互实现了无刷新,现在单页应用的流行,页面交互和跳转都不用刷新了.单页应用是实现,依赖于前端路由.<br>前端路由原理很简单,就是通过url的变化,在特定位置渲染需要的页面内容.但url变化都会造成页面刷新,所以出现了通过监听hash变化同时不会引起页面刷新.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// http://www.xxx.com/#/login</span></span><br><span class="line">location.hash  <span class="comment">// #/login</span></span><br></pre></td></tr></table></figure>
+<p>hash的变化不会引起重新请求和页面刷新,通过监听hashchange事件,实现逻辑操作</p>
+</li>
+<li><p>history模式<br>history是H5标准,多了两个API,pushState和replaceState,以及监听事件popstate,通过这两个API可以改变url且不发送请求,这种方式没有#,更美观.但刷新页面时,还是会向服务器发请求,此时如果不是根路径,就会404,因此,需要服务端配合,将所有路径重定向到根页面.</p>
+</li>
+</ul>
+<hr>
+<p><img src="router.png"></p>
+<h4 id="vue-router实现"><a href="#vue-router实现" class="headerlink" title="vue-router实现"></a>vue-router实现</h4><p>vue-router是vue插件,通过两种形式实现前端路由,下面通过源码,分析其中原理逻辑<br>首先,从VueRouter构造函数入手</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">&#x27;history&#x27;</span>,</span><br><span class="line">  routes: [...]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>精简代码分析如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* @flow */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; install &#125; <span class="keyword">from</span> <span class="string">&#x27;./install&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createMatcher &#125; <span class="keyword">from</span> <span class="string">&#x27;./create-matcher&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; HashHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;./history/hash&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; HTML5History &#125; <span class="keyword">from</span> <span class="string">&#x27;./history/html5&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; AbstractHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;./history/abstract&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">VueRouter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span> (options: RouterOptions = &#123;&#125;) &#123;</span><br><span class="line">    <span class="built_in">this</span>.app = <span class="literal">null</span></span><br><span class="line">    <span class="built_in">this</span>.apps = []</span><br><span class="line">    <span class="built_in">this</span>.options = options</span><br><span class="line">    <span class="built_in">this</span>.beforeHooks = []</span><br><span class="line">    <span class="built_in">this</span>.resolveHooks = []</span><br><span class="line">    <span class="built_in">this</span>.afterHooks = []</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    export function createMatcher (routes, router) &#123;</span></span><br><span class="line"><span class="comment">        // 创建路由映射表</span></span><br><span class="line"><span class="comment">        const &#123; pathList, pathMap, nameMap &#125; = createRouteMap(routes)</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">        function addRoutes (routes) &#123;</span></span><br><span class="line"><span class="comment">            createRouteMap(routes, pathList, pathMap, nameMap)</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        // 路由匹配</span></span><br><span class="line"><span class="comment">        function match (</span></span><br><span class="line"><span class="comment">            raw: RawLocation,</span></span><br><span class="line"><span class="comment">            currentRoute?: Route,</span></span><br><span class="line"><span class="comment">            redirectedFrom?: Location</span></span><br><span class="line"><span class="comment">        ): Route &#123;</span></span><br><span class="line"><span class="comment">            //...</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        return &#123;    // matcher</span></span><br><span class="line"><span class="comment">            match,</span></span><br><span class="line"><span class="comment">            addRoutes</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">// createMatcher:创建路由映射表(pathList, pathMap, nameMap)，然后通过闭包的方式让 addRoutes 和 match函数能够使用路由映射表的几个对象，最后返回一个matcher 对象</span></span><br><span class="line">    <span class="comment">// this.matcher:路由匹配对象,其中有match和addRoutes方法用来匹配当前路由和添加路由</span></span><br><span class="line">    <span class="built_in">this</span>.matcher = createMatcher(options.routes || [], <span class="built_in">this</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> mode = options.mode || <span class="string">&#x27;hash&#x27;</span>   <span class="comment">// 默认hash模式</span></span><br><span class="line">    <span class="built_in">this</span>.fallback =</span><br><span class="line">      mode === <span class="string">&#x27;history&#x27;</span> &amp;&amp; !supportsPushState &amp;&amp; options.fallback !== <span class="literal">false</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.fallback) &#123;    <span class="comment">// 如浏览器不支持，&#x27;history&#x27;模式需回滚为&#x27;hash&#x27;模式</span></span><br><span class="line">      mode = <span class="string">&#x27;hash&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!inBrowser) &#123;</span><br><span class="line">      mode = <span class="string">&#x27;abstract&#x27;</span>     <span class="comment">// 非浏览器环境下运行需强制为&#x27;abstract&#x27;模式</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.mode = mode</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (mode) &#123;     <span class="comment">// 根据不同模式,确定history类并实例化.一下三种history类都继承自同一baseHistory类,做了不同是实现.</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;history&#x27;</span>:</span><br><span class="line">        <span class="built_in">this</span>.history = <span class="keyword">new</span> HTML5History(<span class="built_in">this</span>, options.base)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;hash&#x27;</span>:</span><br><span class="line">        <span class="built_in">this</span>.history = <span class="keyword">new</span> HashHistory(<span class="built_in">this</span>, options.base, <span class="built_in">this</span>.fallback)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;abstract&#x27;</span>:</span><br><span class="line">        <span class="built_in">this</span>.history = <span class="keyword">new</span> AbstractHistory(<span class="built_in">this</span>, options.base)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  match (raw: RawLocation, current?: Route, redirectedFrom?: Location): Route &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.matcher.match(raw, current, redirectedFrom)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  get currentRoute (): ?Route &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.history &amp;&amp; <span class="built_in">this</span>.history.current</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init (app: any <span class="comment">/* Vue component instance */</span>) &#123;</span><br><span class="line">      <span class="comment">/* </span></span><br><span class="line"><span class="comment">        export function install (Vue) &#123;     VueRouter的install方法</span></span><br><span class="line"><span class="comment">            Vue.mixin(&#123;</span></span><br><span class="line"><span class="comment">                beforeCreate () &#123;</span></span><br><span class="line"><span class="comment">                if (isDef(this.$options.router)) &#123;</span></span><br><span class="line"><span class="comment">                    this._router = this.$options.router</span></span><br><span class="line"><span class="comment">                    this._router.init(this)</span></span><br><span class="line"><span class="comment">                    Vue.util.defineReactive(this, &#x27;_route&#x27;, this._router.history.current)       响应化_route</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">                registerInstance(this, this)</span></span><br><span class="line"><span class="comment">                &#125;,</span></span><br><span class="line"><span class="comment">            &#125;)</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">    <span class="comment">// 初始化,注意初始化时机是在new Vue()时触发的,因为Vue.use(VueRouter),vuRouter作为插件安装,</span></span><br><span class="line">    <span class="comment">//在VueRouter的install方法中Vue.mixin(&#123;&#125;)混入_router并init</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.apps.push(app) <span class="comment">// app即Vue组件实例,此处维护了所有可能产生的组件实例</span></span><br><span class="line"></span><br><span class="line">    app.$once(<span class="string">&#x27;hook:destroyed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> index = <span class="built_in">this</span>.apps.indexOf(app)</span><br><span class="line">      <span class="keyword">if</span> (index &gt; <span class="number">-1</span>) <span class="built_in">this</span>.apps.splice(index, <span class="number">1</span>)</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.app === app) <span class="built_in">this</span>.app = <span class="built_in">this</span>.apps[<span class="number">0</span>] || <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!<span class="built_in">this</span>.app) <span class="built_in">this</span>.history.teardown()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.app) &#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.app = app  <span class="comment">// this.app是根组件实例</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> history = <span class="built_in">this</span>.history</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (history <span class="keyword">instanceof</span> HTML5History || history <span class="keyword">instanceof</span> HashHistory) &#123;    <span class="comment">// 路由跳转相关逻辑</span></span><br><span class="line">    <span class="comment">/*    history类简码</span></span><br><span class="line"><span class="comment">        history&#123;</span></span><br><span class="line"><span class="comment">            transitionTo (location: RawLocation, onComplete?: Function, onAbort?: Function) &#123;</span></span><br><span class="line"><span class="comment">                const route = this.router.match(location, this.current)</span></span><br><span class="line"><span class="comment">                this.confirmTransition(route, () =&gt; &#123;</span></span><br><span class="line"><span class="comment">                    this.updateRoute(route)</span></span><br><span class="line"><span class="comment">                    ...</span></span><br><span class="line"><span class="comment">                &#125;)</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            updateRoute (route: Route) &#123;    更新方法,调用history.listen</span></span><br><span class="line"><span class="comment">                this.cb &amp;&amp; this.cb(route)</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            listen (cb: Function) &#123;     生成更新方法的回调函数</span></span><br><span class="line"><span class="comment">                this.cb = cb</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      history.transitionTo(     <span class="comment">// 其中包括push,replace等操作路由方法</span></span><br><span class="line">        history.getCurrentLocation(),</span><br><span class="line">        setupListeners,</span><br><span class="line">        setupListeners</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    history.listen(<span class="function"><span class="params">route</span> =&gt;</span> &#123;   <span class="comment">//history的回调函数,更新组件_route值,确保每个组件都能获得相同的当前路由,在init初始化时,混入过程中将_route添加到app中,且实现响应式.所以_route的变化会引起render</span></span><br><span class="line">      <span class="built_in">this</span>.apps.forEach(<span class="function"><span class="params">app</span> =&gt;</span> &#123;</span><br><span class="line">        app._route = route</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 钩子hook</span></span><br><span class="line">  beforeEach (fn: <span class="built_in">Function</span>): <span class="built_in">Function</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> registerHook(<span class="built_in">this</span>.beforeHooks, fn)</span><br><span class="line">  &#125;</span><br><span class="line">  beforeResolve ...</span><br><span class="line">  afterEach ...</span><br><span class="line">  onReady ...</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 路由操作方法,这里只是代理了history中的方法,而history中的方法是根据不同模式继承自bastHistory的</span></span><br><span class="line">  push (location: RawLocation, onComplete?: <span class="built_in">Function</span>, onAbort?: <span class="built_in">Function</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!onComplete &amp;&amp; !onAbort &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">Promise</span> !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.history.push(location, resolve, reject)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.history.push(location, onComplete, onAbort)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  replace ...</span><br><span class="line">  go ...</span><br><span class="line">  back ...</span><br><span class="line">  forward ...</span><br><span class="line">&#125;</span><br><span class="line">VueRouter.install = install     <span class="comment">// install方法通过上边引入并添加为VueRouter的静态方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (inBrowser &amp;&amp; <span class="built_in">window</span>.Vue) &#123;  <span class="comment">// 在浏览器环境且实例化Vue后自动安装VueRouter插件</span></span><br><span class="line">  <span class="built_in">window</span>.Vue.use(VueRouter)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<p>从设置路由改变到视图更新的流程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$router.push() --&gt; HashHistory.push()&#x2F;HTML5History.push() --&gt; History.transitionTo() --&gt; History.updateRoute() --&gt; &#123;app._route &#x3D; route&#125; --&gt; vm.render()</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="对比hash和history模式"><a href="#对比hash和history模式" class="headerlink" title="对比hash和history模式"></a>对比hash和history模式</h5><ol>
+<li>首先看push,replace方法的实现方式</li>
+</ol>
+<p>因为两种模式用的api是不同的,所以push,replace的实现肯定也不一样.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hash模式</span></span><br><span class="line"><span class="built_in">window</span>.location.hash = path</span><br><span class="line"><span class="built_in">window</span>.location.replace(<span class="built_in">window</span>.location.href.slice(<span class="number">0</span>, i &gt;= <span class="number">0</span> ? i : <span class="number">0</span>) + <span class="string">&#x27;#&#x27;</span> + path)</span><br><span class="line"></span><br><span class="line"><span class="comment">// history模式</span></span><br><span class="line"><span class="built_in">window</span>.history.pushState(stateObject, title, URL)</span><br><span class="line"><span class="built_in">window</span>.history.replaceState(stateObject, title, URL)</span><br></pre></td></tr></table></figure>
+<p>注意,改变路由的方式还可能直接修改浏览器地址栏url,此时需要监听地址栏,路由跳转方式对应两种模式的replace方法.</p>
+<ol start="2">
+<li>选哪种模式更好</li>
+</ol>
+<p>hash优势:<br>如果开发纯本地页面,能够实现路由正常跳转,history模式不行,因为一刷新可能就404了.<br>history优势:<br>没有#,比较美观;<br>pushState设置的新URL可以是与当前URL同源的任意URL；而hash只可修改#后面的部分，故只可设置与当前同文档的URL<br>pushState设置的新URL可以与当前URL一模一样，这样也会把记录添加到栈中；而hash设置的新值必须与原来不一样才会触发记录添加到栈中<br>pushState通过stateObject可以添加任意类型的数据到记录中；而hash只可添加短字符串<br>pushState可额外设置title属性供后续使用</p>
+<hr>
+<h4 id="router-view-amp-router-link"><a href="#router-view-amp-router-link" class="headerlink" title="router-view &amp; router-link"></a>router-view &amp; router-link</h4><ul>
+<li><p>router-view</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;RouterView&#x27;</span>,</span><br><span class="line">  functional: <span class="literal">true</span>, <span class="comment">// 功能组件</span></span><br><span class="line">  props: &#123;</span><br><span class="line">    name: &#123;</span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="string">&#x27;default&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  render (_, &#123; props, children, parent, data &#125;) &#123;</span><br><span class="line">    <span class="comment">// 解决嵌套深度问题</span></span><br><span class="line">    data.routerView = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> h = parent.$createElement</span><br><span class="line">    <span class="keyword">const</span> name = props.name</span><br><span class="line">    <span class="keyword">const</span> route = parent.$route</span><br><span class="line">    <span class="keyword">const</span> cache = parent._routerViewCache || (parent._routerViewCache = &#123;&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> depth = <span class="number">0</span>   <span class="comment">// 当前路由深度</span></span><br><span class="line">    <span class="keyword">let</span> inactive = <span class="literal">false</span>    <span class="comment">// 是否keep-alive并且虚拟dom树是没有改变的</span></span><br><span class="line">    <span class="keyword">while</span> (parent &amp;&amp; parent._routerRoot !== parent) &#123;</span><br><span class="line">      <span class="keyword">const</span> vnodeData = parent.$vnode ? parent.$vnode.data : &#123;&#125;</span><br><span class="line">      <span class="keyword">if</span> (vnodeData.routerView) &#123;</span><br><span class="line">        depth++</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (vnodeData.keepAlive &amp;&amp; parent._directInactive &amp;&amp; parent._inactive) &#123;</span><br><span class="line">        inactive = <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">      parent = parent.$parent</span><br><span class="line">    &#125;</span><br><span class="line">    data.routerViewDepth = depth</span><br><span class="line"></span><br><span class="line">    <span class="comment">// render previous view if the tree is inactive and kept-alive</span></span><br><span class="line">    <span class="keyword">if</span> (inactive) &#123; <span class="comment">// 直接渲染已经缓存的组件</span></span><br><span class="line">      <span class="keyword">const</span> cachedData = cache[name]</span><br><span class="line">      <span class="keyword">const</span> cachedComponent = cachedData &amp;&amp; cachedData.component    <span class="comment">// 获取缓存的组件</span></span><br><span class="line">      <span class="keyword">if</span> (cachedComponent) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cachedData.configProps) &#123;</span><br><span class="line">          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> h(cachedComponent, data, children)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// render previous empty view</span></span><br><span class="line">        <span class="keyword">return</span> h()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> matched = route.matched[depth]    <span class="comment">// 获取当前路由匹配信息</span></span><br><span class="line">    <span class="keyword">const</span> component = matched &amp;&amp; matched.components[name]   <span class="comment">// 获取匹配到的组件</span></span><br><span class="line">    <span class="keyword">if</span> (!matched || !component) &#123;   <span class="comment">// 没有获取路由信息,渲染空组件</span></span><br><span class="line">      cache[name] = <span class="literal">null</span></span><br><span class="line">      <span class="keyword">return</span> h()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// cache component</span></span><br><span class="line">    cache[name] = &#123; component &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> configProps = matched.props &amp;&amp; matched.props[name]</span><br><span class="line">    <span class="keyword">return</span> h(component, data, children)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>router-link</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;RouterLink&#x27;</span>,</span><br><span class="line">  props: &#123;  <span class="comment">// 具体参数说明见文档</span></span><br><span class="line">    to: &#123;</span><br><span class="line">      type: toTypes,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    tag: &#123;  <span class="comment">// 默认将router-link渲染成a标签</span></span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="string">&#x27;a&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    custom: <span class="built_in">Boolean</span>,</span><br><span class="line">    exact: <span class="built_in">Boolean</span>,</span><br><span class="line">    exactPath: <span class="built_in">Boolean</span>,</span><br><span class="line">    append: <span class="built_in">Boolean</span>,</span><br><span class="line">    replace: <span class="built_in">Boolean</span>,</span><br><span class="line">    activeClass: <span class="built_in">String</span>,</span><br><span class="line">    exactActiveClass: <span class="built_in">String</span>,</span><br><span class="line">    ariaCurrentValue: &#123;</span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="string">&#x27;page&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    event: &#123;</span><br><span class="line">      type: eventTypes,</span><br><span class="line">      <span class="keyword">default</span>: <span class="string">&#x27;click&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  render (h: <span class="built_in">Function</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> router = <span class="built_in">this</span>.$router</span><br><span class="line">    <span class="keyword">const</span> current = <span class="built_in">this</span>.$route</span><br><span class="line">    <span class="keyword">const</span> &#123; location, route, href &#125; = router.resolve(</span><br><span class="line">      <span class="built_in">this</span>.to,</span><br><span class="line">      current,</span><br><span class="line">      <span class="built_in">this</span>.append</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 省略关于activeClass,exactActiveClass的逻辑</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 处理跳转事件,push和replace,并限制一些默认事件</span></span><br><span class="line">    <span class="keyword">const</span> handler = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (guardEvent(e)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.replace) &#123;</span><br><span class="line">          router.replace(location, noop)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          router.push(location, noop)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> on = &#123; <span class="attr">click</span>: guardEvent &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(<span class="built_in">this</span>.event)) &#123;</span><br><span class="line">      <span class="built_in">this</span>.event.forEach(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        on[e] = handler</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      on[<span class="built_in">this</span>.event] = handler</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> data: any = &#123; <span class="attr">class</span>: classes &#125;</span><br><span class="line">    <span class="comment">// 插槽逻辑</span></span><br><span class="line">    <span class="keyword">const</span> scopedSlot =</span><br><span class="line">      !<span class="built_in">this</span>.$scopedSlots.$hasNormal &amp;&amp;</span><br><span class="line">      <span class="built_in">this</span>.$scopedSlots.default &amp;&amp;</span><br><span class="line">      <span class="built_in">this</span>.$scopedSlots.default(&#123;</span><br><span class="line">        href,</span><br><span class="line">        route,</span><br><span class="line">        navigate: handler,</span><br><span class="line">        isActive: classes[activeClass],</span><br><span class="line">        isExactActive: classes[exactActiveClass]</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将router-link渲染成什么标签逻辑</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.tag === <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">      data.on = on</span><br><span class="line">      data.attrs = &#123; href, <span class="string">&#x27;aria-current&#x27;</span>: ariaCurrentValue &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// find the first &lt;a&gt; child and apply listener and href</span></span><br><span class="line">      <span class="keyword">const</span> a = findAnchor(<span class="built_in">this</span>.$slots.default)</span><br><span class="line">      <span class="keyword">if</span> (a) &#123;</span><br><span class="line">        <span class="comment">// in case the &lt;a&gt; is a static node</span></span><br><span class="line">        a.isStatic = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">const</span> aData = (a.data = extend(&#123;&#125;, a.data))</span><br><span class="line">        aData.on = aData.on || &#123;&#125;</span><br><span class="line">        <span class="comment">// transform existing events in both objects into arrays so we can push later</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> event <span class="keyword">in</span> aData.on) &#123;</span><br><span class="line">          <span class="keyword">const</span> handler = aData.on[event]</span><br><span class="line">          <span class="keyword">if</span> (event <span class="keyword">in</span> on) &#123;</span><br><span class="line">            aData.on[event] = <span class="built_in">Array</span>.isArray(handler) ? handler : [handler]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// append new listeners for router-link</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> event <span class="keyword">in</span> on) &#123;</span><br><span class="line">          <span class="keyword">if</span> (event <span class="keyword">in</span> aData.on) &#123;</span><br><span class="line">            <span class="comment">// on[event] is always a function</span></span><br><span class="line">            aData.on[event].push(on[event])</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            aData.on[event] = handler</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> aAttrs = (a.data.attrs = extend(&#123;&#125;, a.data.attrs))</span><br><span class="line">        aAttrs.href = href</span><br><span class="line">        aAttrs[<span class="string">&#x27;aria-current&#x27;</span>] = ariaCurrentValue</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// doesn&#x27;t have &lt;a&gt; child, apply listener to self</span></span><br><span class="line">        data.on = on</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建元素</span></span><br><span class="line">    <span class="keyword">return</span> h(<span class="built_in">this</span>.tag, data, <span class="built_in">this</span>.$slots.default)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<hr>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27588422">从vue-router看前端路由的两种实现</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24104410">vue-router源码分析-整体流程</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24574970">vue-router 源码分析-history</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhangycun/p/9403339.html">VueRouter 源码深度解析</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tiedaweishao/p/9144531.html">前端路由简介以及vue-router实现原理</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/Vue/Vuex%E5%8E%9F%E7%90%86/" style="float: left;">
+        ← Vuex原理
+    </a>
+    
+    
+    <a class="pull-right" href="/ES6/ES6%E5%B8%B8%E8%A7%81/">
+        ES6常见 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>vue.config.js | Victor-blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Victor-blog">
+    <meta name="author" content="Victor">
+    <meta name="description" content="世界纷繁亦纷扰~" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Victor-blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Js深入/" class="animsition-link">Js深入<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/NodeJs/" class="animsition-link">NodeJs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/css/" class="animsition-link">css<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ts/" class="animsition-link">ts<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/web系列/" class="animsition-link">web系列<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/工程化/" class="animsition-link">工程化<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/工程化/" class="animsition-link">工程化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/微信相关/" class="animsition-link">微信相关<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/数组相关/" class="animsition-link">数组相关<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/生产工具/" class="animsition-link">生产工具<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/移动端/" class="animsition-link">移动端<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/规范/" class="animsition-link">规范<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/鸡肋/" class="animsition-link">鸡肋<small>(4)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        	<li>
+        		<a class="sb-toggle-submenu">tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js原型-继承/" class="animsition-link">Js原型&amp;继承<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/Js属性-方法/" class="animsition-link">Js属性&amp;方法<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/Node/" class="animsition-link">Node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/css/" class="animsition-link">css<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/diff/" class="animsition-link">diff<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/eslint/" class="animsition-link">eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/node/" class="animsition-link">node<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/package/" class="animsition-link">package<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/this全面解析/" class="animsition-link">this全面解析<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/tools/" class="animsition-link">tools<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/typescript/" class="animsition-link">typescript<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue-config/" class="animsition-link">vue-config<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vueInit/" class="animsition-link">vueInit<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vuex原理/" class="animsition-link">vuex原理<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/vue原理/" class="animsition-link">vue原理<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/vue技巧/" class="animsition-link">vue技巧<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/web/" class="animsition-link">web<small>(13)</small></a></li>
+				    
+				    <li><a href="/tags/webpack/" class="animsition-link">webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/优化/" class="animsition-link">优化<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/作用域闭包/" class="animsition-link">作用域闭包<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/公众号/" class="animsition-link">公众号<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/小程序/" class="animsition-link">小程序<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/插件/" class="animsition-link">插件<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/数组操作/" class="animsition-link">数组操作<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/样式/" class="animsition-link">样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/深浅拷贝/" class="animsition-link">深浅拷贝<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/网络/" class="animsition-link">网络<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/设计模式/" class="animsition-link">设计模式<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/调用堆栈/" class="animsition-link">调用堆栈<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/适配/" class="animsition-link">适配<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/index.html" class="animsition-link" title="about">About</a></li>
+            <!-- <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="GU.SH" class="animsition-link">
+                         <img src="/img/logo.png" alt="GU.SH" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Victor-blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-10-21T08:36:20.000Z" itemprop="datePublished">
+          2021-10-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/vue-config/'>vue-config</a>
+    
+    
+</span>
+                <h1>vue.config.js</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<ul>
+<li><a href="#env">env环境配置</a></li>
+<li><a href="#opt">配置参数</a></li>
+<li><a href="#vueConfig">vue.config.js配置项</a></li>
+<li><a href="#exam">配置示例</a></li>
+<li><a href="#static">静态资源配置</a></li>
+</ul>
+<hr>
+<h3 id="env环境配置"><a href="#env环境配置" class="headerlink" title="env环境配置"></a><a id="env">env环境配置</a></h3><p>创建相应文件,配置对应环境参数</p>
+<ul>
+<li>.env</li>
+<li>.env.development</li>
+<li>.env.test</li>
+<li>.env.production</li>
+</ul>
+<blockquote>
+<p>.env是环境根,其他环境默认会合并到.env,一般不用单独创建配置,只需配置具体环境文件即可</p>
+</blockquote>
+<blockquote>
+<p>注意:默认环境名是固定的(development,test,production),需严格遵守,如要更改,需同时更改scripts命令里的配置;如下:</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .env.dev</span></span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;serve&quot;: &quot;vue-cli-service serve --mode dev&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置参数"><a href="#配置参数" class="headerlink" title="配置参数"></a><a id="opt">配置参数</a></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认参数</span></span><br><span class="line">BASE_URL = <span class="string">&quot;&quot;</span></span><br><span class="line">NODE_ENV = <span class="string">&quot;development&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 可配置参数</span></span><br><span class="line">以VUE_APP_ 开头</span><br><span class="line">VUE_APP_TITLE = <span class="string">&quot;自定义标题&quot;</span></span><br><span class="line">VUE_APP_BASE_URL = <span class="string">&#x27;http://www.baidu.com&#x27;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>代码中使用process.env,会根据不同环境拿到环境对象,包含上述参数属性</p>
+</blockquote>
+<h3 id="vue-config-js配置项"><a href="#vue-config-js配置项" class="headerlink" title="vue.config.js配置项"></a><a id="vueConfig">vue.config.js配置项</a></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> _env = process.env.VUE_APP_ENV</span><br><span class="line"><span class="keyword">const</span> TerserPlugin = <span class="built_in">require</span>(<span class="string">&#x27;terser-webpack-plugin&#x27;</span>)   <span class="comment">// 无需安装</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span> (<span class="params">dir</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> path.join(__dirname, dir)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    publicPath: <span class="string">&#x27;&#x27;</span>,   <span class="comment">// 部署应用包时的基本 URL。&#x27;&#x27;或&#x27;./&#x27;表示相对路径;也可根据环境配置/my-app/;(https://www.my-app.com/my-app/)</span></span><br><span class="line">    assetsDir: <span class="string">&#x27;static&#x27;</span>,    <span class="comment">// 静态资源文件夹名,设置后将js,css,img等文件夹都包裹在static里</span></span><br><span class="line">    outputDir: _env === <span class="string">&#x27;test&#x27;</span> ? <span class="string">&#x27;test&#x27;</span> : <span class="string">&#x27;dist&#x27;</span>,   <span class="comment">// 打包后文件夹名</span></span><br><span class="line">    indexPath: <span class="string">&#x27;main.html&#x27;</span>, <span class="comment">// 打包后index.html名</span></span><br><span class="line">    filenameHashing: <span class="literal">true</span>, <span class="comment">// 是否启用hash值</span></span><br><span class="line">    lintOnSave: <span class="literal">true</span>,   <span class="comment">// eslint开启</span></span><br><span class="line">    productionSourceMap: <span class="literal">true</span>,  <span class="comment">// 打包后是否需要map文件</span></span><br><span class="line">    parallel: <span class="built_in">require</span>(<span class="string">&#x27;os&#x27;</span>).cpus().length &gt; <span class="number">1</span>, <span class="comment">// 构建时开启多进程处理babel编译</span></span><br><span class="line">    chainWebpack: <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;  </span><br><span class="line">        config.optimization.minimize(<span class="literal">true</span>); <span class="comment">// 压缩代码</span></span><br><span class="line">        config.optimization.splitChunks(&#123;   <span class="comment">// 分割代码</span></span><br><span class="line">            chunks: <span class="string">&#x27;all&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// 用cdn方式引入</span></span><br><span class="line">        config.externals(&#123;  <span class="comment">// 需在index.html中cdn引入 &lt;script src=&quot;https://cdn.bootcss.com/vue/2.6.10/vue.runtime.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">        <span class="string">&#x27;vue&#x27;</span>: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;vuex&#x27;</span>: <span class="string">&#x27;Vuex&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;vue-router&#x27;</span>: <span class="string">&#x27;VueRouter&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;mint-ui&#x27;</span>: <span class="string">&#x27;MINT&#x27;</span>,  <span class="comment">// 需用MINT</span></span><br><span class="line">        <span class="string">&#x27;axios&#x27;</span>: <span class="string">&#x27;axios&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// px2rem-loader配置,正常sass不需要在此配置,可在下边css选项配置</span></span><br><span class="line">        config.module</span><br><span class="line">        .rule(<span class="string">&#x27;scss&#x27;</span>)</span><br><span class="line">        <span class="comment">// .test(/\.css$/)</span></span><br><span class="line">        .oneOf(<span class="string">&#x27;vue&#x27;</span>)</span><br><span class="line">        .resourceQuery(<span class="regexp">/\?vue/</span>)</span><br><span class="line">        .use(<span class="string">&#x27;px2rem-loader&#x27;</span>)</span><br><span class="line">        .loader(<span class="string">&#x27;px2rem-loader&#x27;</span>)</span><br><span class="line">        .before(<span class="string">&#x27;sass-loader&#x27;</span>)</span><br><span class="line">        .options(&#123;</span><br><span class="line">            remUnit: <span class="number">75</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// 别名配置</span></span><br><span class="line">        config.resolve.alias</span><br><span class="line">        .set(<span class="string">&#x27;@&#x27;</span>, resolve(<span class="string">&#x27;src&#x27;</span>))</span><br><span class="line">        .set(<span class="string">&#x27;@assets&#x27;</span>, path.join(__dirname, <span class="string">&#x27;./src/assets&#x27;</span>))</span><br><span class="line">    &#125;,</span><br><span class="line">    css: &#123;</span><br><span class="line">        extract: <span class="literal">true</span>,  <span class="comment">// 是否将组件中的 CSS 提取至一个独立的 CSS 文件中;默认生产环境下是 true，开发环境下是 false</span></span><br><span class="line">        loaderOptions: &#123;    <span class="comment">// 能配置css,sass,less,stylus,postcss</span></span><br><span class="line">            css: &#123;&#125;,</span><br><span class="line">            ...</span><br><span class="line">            sass: &#123; <span class="comment">// sass-loader版本不同,配置不同</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            &lt; v8    data</span></span><br><span class="line"><span class="comment">            &lt; v10   prependData</span></span><br><span class="line"><span class="comment">            &gt; v10   additionalData</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">                data: <span class="string">`</span></span><br><span class="line"><span class="string">                    @import &quot;~@assets/style/variables.scss&quot;;</span></span><br><span class="line"><span class="string">                    @import &quot;~@assets/style/common.scss&quot;;</span></span><br><span class="line"><span class="string">                    `</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    pluginOptions: &#123;</span><br><span class="line">        <span class="string">&#x27;style-resources-loader&#x27;</span>: &#123; <span class="comment">// less配置公共样式;</span></span><br><span class="line">        <span class="comment">// 需安装依赖vue-cli-plugin-style-resources-loader;style-resources-loader</span></span><br><span class="line">            preProcessor: <span class="string">&#x27;less&#x27;</span>,</span><br><span class="line">            patterns: [ <span class="comment">// 貌似不能用别名路径</span></span><br><span class="line">                resolve(<span class="string">&#x27;./src/assets/style/variable.less&#x27;</span>), <span class="comment">// 配置公共样式</span></span><br><span class="line">                resolve(<span class="string">&#x27;./src/assets/style/minix.less&#x27;</span>) <span class="comment">// 配置公共样式</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        proxy: &#123;</span><br><span class="line">            <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">                target: <span class="string">&#x27;http://xxx.com:8081&#x27;</span>,  <span class="comment">// 后台接口域名</span></span><br><span class="line">                ws: <span class="literal">true</span>,        <span class="comment">//如果要代理 websockets，配置这个参数</span></span><br><span class="line">                secure: <span class="literal">false</span>,  <span class="comment">// 如果是https接口，需要配置这个参数</span></span><br><span class="line">                changeOrigin: <span class="literal">true</span>,  <span class="comment">//是否跨域</span></span><br><span class="line">                pathRewrite:&#123;   <span class="comment">// 重写/api</span></span><br><span class="line">                    <span class="string">&#x27;^/api&#x27;</span>:<span class="string">&#x27;&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// webpack 配置</span></span><br><span class="line">    configureWebpack: &#123;</span><br><span class="line">        <span class="comment">// 使用这个属性就可以在index.html使用cdn引入，可以不用安装依赖包</span></span><br><span class="line">        externals: &#123;<span class="comment">// 需在index.html中cdn引入 &lt;script src=&quot;https://cdn.bootcss.com/vue/2.6.10/vue.runtime.min.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&#x27;vue&#x27;</span>: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;vuex&#x27;</span>: <span class="string">&#x27;Vuex&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;vue-router&#x27;</span>: <span class="string">&#x27;VueRouter&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;mint-ui&#x27;</span>: <span class="string">&#x27;MINT&#x27;</span>,  <span class="comment">// 需用MINT</span></span><br><span class="line">                <span class="string">&#x27;axios&#x27;</span>: <span class="string">&#x27;axios&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        resolve: &#123;</span><br><span class="line">        <span class="comment">// 设置别名</span></span><br><span class="line">            alias: &#123;</span><br><span class="line">                <span class="string">&#x27;@&#x27;</span>: resolve(<span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">                <span class="string">&#x27;@components&#x27;</span>: resolve(<span class="string">&#x27;src/components&#x27;</span>),</span><br><span class="line">                <span class="string">&#x27;@views&#x27;</span>: resolve(<span class="string">&#x27;src/views&#x27;</span>),</span><br><span class="line">                <span class="string">&#x27;@api&#x27;</span>: resolve(<span class="string">&#x27;src/request/api&#x27;</span>),</span><br><span class="line">                <span class="string">&#x27;@assets&#x27;</span>: resolve(<span class="string">&#x27;src/assets&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 解决webpack性能优化</span></span><br><span class="line">        performance: &#123;</span><br><span class="line">            hints: <span class="string">&#x27;warning&#x27;</span>,</span><br><span class="line">            maxEntrypointSize: <span class="number">50000000</span>,</span><br><span class="line">            maxAssetSize: <span class="number">30000000</span>,</span><br><span class="line">            assetFilter: <span class="function"><span class="keyword">function</span> (<span class="params">assetFilename</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> assetFilename.endsWith(<span class="string">&#x27;.js&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 生产去掉console</span></span><br><span class="line">        optimization: &#123;</span><br><span class="line">            minimizer: [</span><br><span class="line">                <span class="keyword">new</span> TerserPlugin(&#123;</span><br><span class="line">                terserOptions: &#123;</span><br><span class="line">                    ecma: <span class="literal">undefined</span>,</span><br><span class="line">                    warnings: <span class="literal">false</span>,</span><br><span class="line">                    parse: &#123;&#125;,</span><br><span class="line">                    compress: &#123;</span><br><span class="line">                        drop_console: <span class="literal">true</span>,</span><br><span class="line">                        drop_debugger: <span class="literal">false</span>,</span><br><span class="line">                        pure_funcs: [<span class="string">&#x27;console.log&#x27;</span>] <span class="comment">// 移除console</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a><a id="exam">配置示例</a></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js配置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// gzip压缩插件</span></span><br><span class="line"><span class="keyword">const</span> CompressionWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;compression-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代码打包之后取出console.log压缩代码</span></span><br><span class="line"><span class="keyword">const</span> TerserPlugin = <span class="built_in">require</span>(<span class="string">&#x27;terser-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 图形化打包详情</span></span><br><span class="line"><span class="keyword">const</span> BundleAnalyzer = <span class="built_in">require</span>(<span class="string">&#x27;webpack-bundle-analyzer&#x27;</span>).BundleAnalyzerPlugin</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cdn = &#123;</span><br><span class="line">  <span class="comment">// 忽略打包的第三方库</span></span><br><span class="line">  externals: &#123;</span><br><span class="line">    vue: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">    vuex: <span class="string">&#x27;Vuex&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;vue-router&#x27;</span>: <span class="string">&#x27;VueRouter&#x27;</span>,</span><br><span class="line">    axios: <span class="string">&#x27;axios&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 通过cdn方式使用</span></span><br><span class="line">  js: [</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/vue/2.6.11/vue.runtime.min.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/vue-router/3.1.2/vue-router.min.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/vuex/3.1.2/vuex.min.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/axios/0.19.2/axios.min.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://cdn.bootcss.com/echarts/3.7.1/echarts.min.js&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  css: []</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span> (<span class="params">dir</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> path.join(__dirname, dir)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// 是否触发eslint检查</span></span><br><span class="line">  lintOnSave: <span class="literal">false</span>,</span><br><span class="line">  publicPath: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">  <span class="comment">// 打包文件的出口</span></span><br><span class="line">  outputDir: <span class="string">&#x27;dist&#x27;</span>,</span><br><span class="line">  <span class="comment">// 放置生成的css和js和img和fonts的目录</span></span><br><span class="line">  assetsDir: <span class="string">&#x27;static&#x27;</span>,</span><br><span class="line">  <span class="comment">// 存放index.html模板的路径</span></span><br><span class="line">  indexPath: <span class="string">&#x27;static/index.html&#x27;</span>,</span><br><span class="line">  productionSourceMap: <span class="literal">false</span>,</span><br><span class="line">  chainWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 配置cdn引入</span></span><br><span class="line">    config.plugin(<span class="string">&#x27;html&#x27;</span>).tap(<span class="function"><span class="params">args</span> =&gt;</span> &#123;</span><br><span class="line">      args[<span class="number">0</span>].cdn = cdn</span><br><span class="line">      <span class="keyword">return</span> args</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 移除prefetch插件，避免加载多余的资源</span></span><br><span class="line">    config.plugins.delete(<span class="string">&#x27;prefetch&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定义文件夹的路径</span></span><br><span class="line">    config.resolve.alias</span><br><span class="line">      .set(<span class="string">&#x27;@&#x27;</span>, resolve(<span class="string">&#x27;src&#x27;</span>))</span><br><span class="line">      .set(<span class="string">&#x27;assets&#x27;</span>, resolve(<span class="string">&#x27;src/assets&#x27;</span>))</span><br><span class="line">      .set(<span class="string">&#x27;components&#x27;</span>, resolve(<span class="string">&#x27;src/components&#x27;</span>))</span><br><span class="line">      .set(<span class="string">&#x27;router&#x27;</span>, resolve(<span class="string">&#x27;src/router&#x27;</span>))</span><br><span class="line">      .set(<span class="string">&#x27;store&#x27;</span>, resolve(<span class="string">&#x27;src/store&#x27;</span>))</span><br><span class="line">      .set(<span class="string">&#x27;views&#x27;</span>, resolve(<span class="string">&#x27;src/views&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 压缩图片</span></span><br><span class="line">    <span class="keyword">const</span> imagesRule = config.module.rule(<span class="string">&#x27;images&#x27;</span>)</span><br><span class="line">    imagesRule.uses.clear()</span><br><span class="line">    imagesRule.use(<span class="string">&#x27;file-loader&#x27;</span>)</span><br><span class="line">      .loader(<span class="string">&#x27;url-loader&#x27;</span>)</span><br><span class="line">      .options(&#123;</span><br><span class="line">        limit: <span class="number">10240</span>,</span><br><span class="line">        fallback: &#123;</span><br><span class="line">          loader: <span class="string">&#x27;file-loader&#x27;</span>,</span><br><span class="line">          options: &#123;</span><br><span class="line">            outputPath: <span class="string">&#x27;static/images&#x27;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 压缩响应的app.json返回的代码压缩</span></span><br><span class="line">    config.optimization.minimize(<span class="literal">true</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// webpack的配置</span></span><br><span class="line">  configureWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 忽略打包配置</span></span><br><span class="line">    config.externals = cdn.externals</span><br><span class="line">    <span class="comment">// 生产环境配置</span></span><br><span class="line">    <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">&#x27;production&#x27;</span>) &#123;</span><br><span class="line">      <span class="comment">// 代码压缩去除console.log</span></span><br><span class="line">      config.plugins.push(</span><br><span class="line">        <span class="keyword">new</span> TerserPlugin(&#123;</span><br><span class="line">          terserOptions: &#123;</span><br><span class="line">            ecma: <span class="literal">undefined</span>,</span><br><span class="line">            warnings: <span class="literal">false</span>,</span><br><span class="line">            parse: &#123;&#125;,</span><br><span class="line">            compress: &#123;</span><br><span class="line">              drop_console: <span class="literal">true</span>,</span><br><span class="line">              drop_debugger: <span class="literal">false</span>,</span><br><span class="line">              pure_funcs: [<span class="string">&#x27;console.log&#x27;</span>] <span class="comment">// 移除console</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 开启gzip压缩</span></span><br><span class="line">    config.plugins.push(</span><br><span class="line">      <span class="keyword">new</span> CompressionWebpackPlugin(</span><br><span class="line">        &#123;</span><br><span class="line">          filename: <span class="function"><span class="params">info</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;info.path&#125;</span>.gz<span class="subst">$&#123;info.query&#125;</span>`</span></span><br><span class="line">          &#125;,</span><br><span class="line">          algorithm: <span class="string">&#x27;gzip&#x27;</span>,</span><br><span class="line">          threshold: <span class="number">10240</span>, <span class="comment">// 只有大小大于该值的资源会被处理 10240</span></span><br><span class="line">          test: <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&#x27;\\.(&#x27;</span> + [<span class="string">&#x27;js&#x27;</span>].join(<span class="string">&#x27;|&#x27;</span>) + <span class="string">&#x27;)$&#x27;</span></span><br><span class="line">          ),</span><br><span class="line">          minRatio: <span class="number">0.8</span>, <span class="comment">// 只有压缩率小于这个值的资源才会被处理</span></span><br><span class="line">          deleteOriginalAssets: <span class="literal">false</span> <span class="comment">// 删除原文件</span></span><br><span class="line">        &#125;</span><br><span class="line">      )</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 展示打包图形化信息</span></span><br><span class="line">    config.plugins.push(</span><br><span class="line">      <span class="keyword">new</span> BundleAnalyzer()</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 公共代码抽离</span></span><br><span class="line">    config.optimization = &#123;</span><br><span class="line">      splitChunks: &#123;</span><br><span class="line">        cacheGroups: &#123;</span><br><span class="line">          vendor: &#123;</span><br><span class="line">            chunks: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">            test: <span class="regexp">/node_modules/</span>,</span><br><span class="line">            name: <span class="string">&#x27;vendor&#x27;</span>,</span><br><span class="line">            minChunks: <span class="number">1</span>,</span><br><span class="line">            maxInitialRequests: <span class="number">5</span>,</span><br><span class="line">            minSize: <span class="number">0</span>,</span><br><span class="line">            priority: <span class="number">100</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  css: &#123;</span><br><span class="line">    extract: <span class="literal">true</span>,</span><br><span class="line">    sourceMap: <span class="literal">false</span>,</span><br><span class="line">    loaderOptions: &#123;</span><br><span class="line">      <span class="comment">// 定义全局scss无需引入即可使用</span></span><br><span class="line">      sass: &#123;</span><br><span class="line">        prependData: <span class="string">`</span></span><br><span class="line"><span class="string">          @import &quot;@/assets/css/variable.scss&quot;;</span></span><br><span class="line"><span class="string">          @import &quot;@/assets/css/common.scss&quot;;</span></span><br><span class="line"><span class="string">          @import &quot;@/assets/css/mixin.scss&quot;;</span></span><br><span class="line"><span class="string">        `</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 需要gzip压缩的文件</span></span><br><span class="line">  devServer: &#123;</span><br><span class="line">    host: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port: <span class="number">8080</span>, <span class="comment">// 端口号</span></span><br><span class="line">    open: <span class="literal">false</span>, <span class="comment">// 配置自动启动浏览器</span></span><br><span class="line">    before (app, server) &#123;</span><br><span class="line">      app.get(<span class="regexp">/.*.(js)$/</span>, <span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">        req.url = req.url + <span class="string">&#x27;.gz&#x27;</span></span><br><span class="line">        res.set(<span class="string">&#x27;Content-Encoding&#x27;</span>, <span class="string">&#x27;gzip&#x27;</span>)</span><br><span class="line">        next()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> SpritesmithPlugin = <span class="built_in">require</span>(<span class="string">&quot;webpack-spritesmith&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> BundleAnalyzerPlugin = <span class="built_in">require</span>(<span class="string">&quot;webpack-bundle-analyzer&quot;</span>)</span><br><span class="line">  .BundleAnalyzerPlugin;</span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&quot;webpack&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> resolve = <span class="function"><span class="params">dir</span> =&gt;</span> path.join(__dirname, dir);</span><br><span class="line"><span class="keyword">const</span> IS_PROD = [<span class="string">&quot;production&quot;</span>, <span class="string">&quot;prod&quot;</span>].includes(process.env.NODE_ENV);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> glob = <span class="built_in">require</span>(<span class="string">&#x27;glob&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> pagesInfo = <span class="built_in">require</span>(<span class="string">&#x27;./pages.config&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> pages = &#123;&#125;</span><br><span class="line"></span><br><span class="line">glob.sync(<span class="string">&#x27;./src/pages/**/main.js&#x27;</span>).forEach(<span class="function"><span class="params">entry</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> chunk = entry.match(<span class="regexp">/\.\/src\/pages\/(.*)\/main\.js/</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">const</span> curr = pagesInfo[chunk];</span><br><span class="line">  <span class="keyword">if</span> (curr) &#123;</span><br><span class="line">    pages[chunk] = &#123;</span><br><span class="line">      entry,</span><br><span class="line">      ...curr,</span><br><span class="line">      chunk: [<span class="string">&quot;chunk-vendors&quot;</span>, <span class="string">&quot;chunk-common&quot;</span>, chunk]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> has_sprite = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">let</span> files = [];</span><br><span class="line"><span class="keyword">const</span> icons = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  fs.statSync(resolve(<span class="string">&quot;./src/assets/icons&quot;</span>));</span><br><span class="line">  files = fs.readdirSync(resolve(<span class="string">&quot;./src/assets/icons&quot;</span>));</span><br><span class="line">  files.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> filename = item.toLocaleLowerCase().replace(<span class="regexp">/_/g</span>, <span class="string">&quot;-&quot;</span>);</span><br><span class="line">    icons[filename] = <span class="literal">true</span>;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">  fs.mkdirSync(resolve(<span class="string">&quot;./src/assets/icons&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!files.length) &#123;</span><br><span class="line">  has_sprite = <span class="literal">false</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> iconsObj = fs.readFileSync(resolve(<span class="string">&quot;./icons.json&quot;</span>), <span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">    iconsObj = <span class="built_in">JSON</span>.parse(iconsObj);</span><br><span class="line">    has_sprite = files.some(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> filename = item.toLocaleLowerCase().replace(<span class="regexp">/_/g</span>, <span class="string">&quot;-&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> !iconsObj[filename];</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">if</span> (has_sprite) &#123;</span><br><span class="line">      fs.writeFileSync(resolve(<span class="string">&quot;./icons.json&quot;</span>), <span class="built_in">JSON</span>.stringify(icons, <span class="literal">null</span>, <span class="number">2</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    fs.writeFileSync(resolve(<span class="string">&quot;./icons.json&quot;</span>), <span class="built_in">JSON</span>.stringify(icons, <span class="literal">null</span>, <span class="number">2</span>));</span><br><span class="line">    has_sprite = <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 雪碧图样式处理模板</span></span><br><span class="line"><span class="keyword">const</span> SpritesmithTemplate = <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// pc</span></span><br><span class="line">  <span class="keyword">let</span> icons = &#123;&#125;</span><br><span class="line">  <span class="keyword">let</span> tpl = <span class="string">`.ico &#123; </span></span><br><span class="line"><span class="string">  display: inline-block; </span></span><br><span class="line"><span class="string">  background-image: url(<span class="subst">$&#123;data.sprites[<span class="number">0</span>].image&#125;</span>); </span></span><br><span class="line"><span class="string">  background-size: <span class="subst">$&#123;data.spritesheet.width&#125;</span>px <span class="subst">$&#123;data.spritesheet.height&#125;</span>px; </span></span><br><span class="line"><span class="string">&#125;`</span></span><br><span class="line"></span><br><span class="line">  data.sprites.forEach(<span class="function"><span class="params">sprite</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> name = <span class="string">&#x27;&#x27;</span> + sprite.name.toLocaleLowerCase().replace(<span class="regexp">/_/g</span>, <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">    icons[<span class="string">`<span class="subst">$&#123;name&#125;</span>.png`</span>] = <span class="literal">true</span></span><br><span class="line">    tpl = <span class="string">`<span class="subst">$&#123;tpl&#125;</span> </span></span><br><span class="line"><span class="string">.ico-<span class="subst">$&#123;name&#125;</span>&#123;</span></span><br><span class="line"><span class="string">  width: <span class="subst">$&#123;sprite.width&#125;</span>px; </span></span><br><span class="line"><span class="string">  height: <span class="subst">$&#123;sprite.height&#125;</span>px; </span></span><br><span class="line"><span class="string">  background-position: <span class="subst">$&#123;sprite.offset_x&#125;</span>px <span class="subst">$&#123;sprite.offset_y&#125;</span>px;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> tpl</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  publicPath: IS_PROD ? process.env.VUE_APP_PUBLIC_PATH : <span class="string">&quot;./&quot;</span>, <span class="comment">// 默认&#x27;/&#x27;，部署应用包时的基本 URL</span></span><br><span class="line">  <span class="comment">// outputDir: process.env.outputDir || &#x27;dist&#x27;, // &#x27;dist&#x27;, 生产环境构建文件的目录</span></span><br><span class="line">  <span class="comment">// assetsDir: &quot;&quot;, // 相对于outputDir的静态资源(js、css、img、fonts)目录</span></span><br><span class="line">  configureWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> plugins = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (has_sprite) &#123;</span><br><span class="line">      <span class="comment">// 生成雪碧图</span></span><br><span class="line">      plugins.push(</span><br><span class="line">        <span class="keyword">new</span> SpritesmithPlugin(&#123;</span><br><span class="line">          src: &#123;</span><br><span class="line">            cwd: path.resolve(__dirname, <span class="string">&#x27;./src/assets/icons/&#x27;</span>), <span class="comment">// 图标根路径</span></span><br><span class="line">            glob: <span class="string">&#x27;**/*.png&#x27;</span> <span class="comment">// 匹配任意 png 图标</span></span><br><span class="line">          &#125;,</span><br><span class="line">          target: &#123;</span><br><span class="line">            image: path.resolve(__dirname, <span class="string">&#x27;./src/assets/images/sprites.png&#x27;</span>), <span class="comment">// 生成雪碧图目标路径与名称</span></span><br><span class="line">            <span class="comment">// 设置生成CSS背景及其定位的文件或方式</span></span><br><span class="line">            css: [</span><br><span class="line">              [</span><br><span class="line">                path.resolve(__dirname, <span class="string">&#x27;./src/assets/scss/sprites.scss&#x27;</span>),</span><br><span class="line">                &#123;</span><br><span class="line">                  format: <span class="string">&#x27;function_based_template&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">              ]</span><br><span class="line">            ]</span><br><span class="line">          &#125;,</span><br><span class="line">          customTemplates: &#123;</span><br><span class="line">            function_based_template: SpritesmithTemplate</span><br><span class="line">          &#125;,</span><br><span class="line">          apiOptions: &#123;</span><br><span class="line">            cssImageRef: <span class="string">&#x27;../images/sprites.png&#x27;</span> <span class="comment">// css文件中引用雪碧图的相对位置路径配置</span></span><br><span class="line">          &#125;,</span><br><span class="line">          spritesmithOptions: &#123;</span><br><span class="line">            padding: <span class="number">2</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config.externals = &#123;</span><br><span class="line">      vue: <span class="string">&quot;Vue&quot;</span>,</span><br><span class="line">      <span class="string">&quot;element-ui&quot;</span>: <span class="string">&quot;ELEMENT&quot;</span>,</span><br><span class="line">      <span class="string">&quot;vue-router&quot;</span>: <span class="string">&quot;VueRouter&quot;</span>,</span><br><span class="line">      vuex: <span class="string">&quot;Vuex&quot;</span>,</span><br><span class="line">      axios: <span class="string">&quot;axios&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    config.plugins = [...config.plugins, ...plugins];</span><br><span class="line">  &#125;,</span><br><span class="line">  chainWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 修复HMR</span></span><br><span class="line">    config.resolve.symlinks(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// config.plugins.delete(&#x27;preload&#x27;);</span></span><br><span class="line">    <span class="comment">// config.plugins.delete(&#x27;prefetch&#x27;);</span></span><br><span class="line"></span><br><span class="line">    config</span><br><span class="line">      .plugin(<span class="string">&quot;ignore&quot;</span>)</span><br><span class="line">      .use(</span><br><span class="line">        <span class="keyword">new</span> webpack.ContextReplacementPlugin(<span class="regexp">/moment[/\\]locale$/</span>, <span class="regexp">/zh-cn$/</span>)</span><br><span class="line">      );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加别名</span></span><br><span class="line">    config.resolve.alias</span><br><span class="line">      .set(<span class="string">&quot;vue$&quot;</span>, <span class="string">&quot;vue/dist/vue.esm.js&quot;</span>)</span><br><span class="line">      .set(<span class="string">&quot;@&quot;</span>, resolve(<span class="string">&quot;src&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@apis&quot;</span>, resolve(<span class="string">&quot;src/apis&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@assets&quot;</span>, resolve(<span class="string">&quot;src/assets&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@scss&quot;</span>, resolve(<span class="string">&quot;src/assets/scss&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@components&quot;</span>, resolve(<span class="string">&quot;src/components&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@middlewares&quot;</span>, resolve(<span class="string">&quot;src/middlewares&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@mixins&quot;</span>, resolve(<span class="string">&quot;src/mixins&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@plugins&quot;</span>, resolve(<span class="string">&quot;src/plugins&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@router&quot;</span>, resolve(<span class="string">&quot;src/router&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@store&quot;</span>, resolve(<span class="string">&quot;src/store&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@utils&quot;</span>, resolve(<span class="string">&quot;src/utils&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@views&quot;</span>, resolve(<span class="string">&quot;src/views&quot;</span>))</span><br><span class="line">      .set(<span class="string">&quot;@layouts&quot;</span>, resolve(<span class="string">&quot;src/layouts&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> cdn = &#123;</span><br><span class="line">      <span class="comment">// 访问https://unpkg.com/element-ui/lib/theme-chalk/index.css获取最新版本</span></span><br><span class="line">      css: [<span class="string">&quot;//unpkg.com/element-ui@2.10.1/lib/theme-chalk/index.css&quot;</span>],</span><br><span class="line">      js: [</span><br><span class="line">        <span class="string">&quot;//unpkg.com/vue@2.6.10/dist/vue.min.js&quot;</span>, <span class="comment">// 访问https://unpkg.com/vue/dist/vue.min.js获取最新版本</span></span><br><span class="line">        <span class="string">&quot;//unpkg.com/vue-router@3.0.6/dist/vue-router.min.js&quot;</span>,</span><br><span class="line">        <span class="string">&quot;//unpkg.com/vuex@3.1.1/dist/vuex.min.js&quot;</span>,</span><br><span class="line">        <span class="string">&quot;//unpkg.com/axios@0.19.0/dist/axios.min.js&quot;</span>,</span><br><span class="line">        <span class="string">&quot;//unpkg.com/element-ui@2.10.1/lib/index.js&quot;</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中</span></span><br><span class="line">    <span class="comment">// config.plugin(&quot;html&quot;).tap(args =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//   // html中添加cdn</span></span><br><span class="line">    <span class="comment">//   args[0].cdn = cdn;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//   // 修复 Lazy loading routes Error</span></span><br><span class="line">    <span class="comment">//   args[0].chunksSortMode = &quot;none&quot;;</span></span><br><span class="line">    <span class="comment">//   return args;</span></span><br><span class="line">    <span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 防止多页面打包卡顿</span></span><br><span class="line">    config =&gt; config.plugins.delete(<span class="string">&#x27;named-chunks&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 多页面cdn添加</span></span><br><span class="line">    <span class="built_in">Object</span>.keys(pagesInfo).forEach(<span class="function"><span class="params">page</span> =&gt;</span> &#123;</span><br><span class="line">      config.plugin(<span class="string">`html-<span class="subst">$&#123;page&#125;</span>`</span>).tap(<span class="function"><span class="params">args</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// html中添加cdn</span></span><br><span class="line">        args[<span class="number">0</span>].cdn = cdn;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 修复 Lazy loading routes Error</span></span><br><span class="line">        args[<span class="number">0</span>].chunksSortMode = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> args;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (IS_PROD) &#123;</span><br><span class="line">      <span class="comment">// 压缩图片</span></span><br><span class="line">      config.module</span><br><span class="line">        .rule(<span class="string">&quot;images&quot;</span>)</span><br><span class="line">        .test(<span class="regexp">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>)</span><br><span class="line">        .use(<span class="string">&quot;image-webpack-loader&quot;</span>)</span><br><span class="line">        .loader(<span class="string">&quot;image-webpack-loader&quot;</span>)</span><br><span class="line">        .options(&#123;</span><br><span class="line">          mozjpeg: &#123; <span class="attr">progressive</span>: <span class="literal">true</span>, <span class="attr">quality</span>: <span class="number">65</span> &#125;,</span><br><span class="line">          optipng: &#123; <span class="attr">enabled</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">          pngquant: &#123; <span class="attr">quality</span>: [<span class="number">0.65</span>, <span class="number">0.90</span>], <span class="attr">speed</span>: <span class="number">4</span> &#125;,</span><br><span class="line">          gifsicle: &#123; <span class="attr">interlaced</span>: <span class="literal">false</span> &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 打包分析</span></span><br><span class="line">      config.plugin(<span class="string">&quot;webpack-report&quot;</span>).use(BundleAnalyzerPlugin, [</span><br><span class="line">        &#123;</span><br><span class="line">          analyzerMode: <span class="string">&quot;static&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用svg组件</span></span><br><span class="line">    <span class="keyword">const</span> svgRule = config.module.rule(<span class="string">&quot;svg&quot;</span>);</span><br><span class="line">    svgRule.uses.clear();</span><br><span class="line">    svgRule.exclude.add(<span class="regexp">/node_modules/</span>);</span><br><span class="line">    svgRule</span><br><span class="line">      .test(<span class="regexp">/\.svg$/</span>)</span><br><span class="line">      .use(<span class="string">&quot;svg-sprite-loader&quot;</span>)</span><br><span class="line">      .loader(<span class="string">&quot;svg-sprite-loader&quot;</span>)</span><br><span class="line">      .options(&#123;</span><br><span class="line">        symbolId: <span class="string">&quot;icon-[name]&quot;</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> imagesRule = config.module.rule(<span class="string">&quot;images&quot;</span>);</span><br><span class="line">    imagesRule.exclude.add(resolve(<span class="string">&quot;src/icons&quot;</span>));</span><br><span class="line">    config.module.rule(<span class="string">&quot;images&quot;</span>).test(<span class="regexp">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">  &#125;,</span><br><span class="line">  pages,</span><br><span class="line">  css: &#123;</span><br><span class="line">    extract: IS_PROD,</span><br><span class="line">    sourceMap: <span class="literal">false</span>,</span><br><span class="line">    loaderOptions: &#123;</span><br><span class="line">      scss: &#123;</span><br><span class="line">        <span class="comment">// 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀</span></span><br><span class="line">        <span class="comment">// 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders</span></span><br><span class="line">        prependData: <span class="string">`</span></span><br><span class="line"><span class="string">          @import &quot;@scss/variables.scss&quot;;</span></span><br><span class="line"><span class="string">          @import &quot;@scss/mixins.scss&quot;;</span></span><br><span class="line"><span class="string">          @import &quot;@scss/function.scss&quot;;</span></span><br><span class="line"><span class="string">          $src: &quot;<span class="subst">$&#123;process.env.VUE_APP_BASE_API&#125;</span>&quot;;</span></span><br><span class="line"><span class="string">          `</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  lintOnSave: <span class="literal">false</span>,</span><br><span class="line">  runtimeCompiler: <span class="literal">true</span>, <span class="comment">// 是否使用包含运行时编译器的 Vue 构建版本</span></span><br><span class="line">  productionSourceMap: !IS_PROD, <span class="comment">// 生产环境的 source map</span></span><br><span class="line">  parallel: <span class="built_in">require</span>(<span class="string">&quot;os&quot;</span>).cpus().length &gt; <span class="number">1</span>,</span><br><span class="line">  pwa: &#123;&#125;,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    <span class="comment">// overlay: &#123; // 让浏览器 overlay 同时显示警告和错误</span></span><br><span class="line">    <span class="comment">//   warnings: true,</span></span><br><span class="line">    <span class="comment">//   errors: true</span></span><br><span class="line">    <span class="comment">// &#125;,</span></span><br><span class="line">    <span class="comment">// open: false, // 是否打开浏览器</span></span><br><span class="line">    <span class="comment">// host: &quot;localhost&quot;,</span></span><br><span class="line">    <span class="comment">// port: &quot;8080&quot;, // 代理断就</span></span><br><span class="line">    <span class="comment">// https: false,</span></span><br><span class="line">    <span class="comment">// hotOnly: false, // 热更新</span></span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="string">&quot;/api&quot;</span>: &#123;</span><br><span class="line">        target:</span><br><span class="line">          <span class="string">&quot;https://www.easy-mock.com/mock/5bc75b55dc36971c160cad1b/sheets&quot;</span>, <span class="comment">// 目标代理接口地址</span></span><br><span class="line">        secure: <span class="literal">false</span>,</span><br><span class="line">        changeOrigin: <span class="literal">true</span>, <span class="comment">// 开启代理，在本地创建一个虚拟服务端</span></span><br><span class="line">        <span class="comment">// ws: true, // 是否启用websockets</span></span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">&quot;^/api&quot;</span>: <span class="string">&quot;/&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="静态资源配置"><a href="#静态资源配置" class="headerlink" title="静态资源配置"></a><a id="static">静态资源配置</a></h3><h4 id="静态资源可以通过两种方式进行处理："><a href="#静态资源可以通过两种方式进行处理：" class="headerlink" title="静态资源可以通过两种方式进行处理："></a>静态资源可以通过两种方式进行处理：</h4><ul>
+<li><p>在 JavaScript 被导入或在 template/CSS 中通过相对路径被引用。这类引用会被 webpack 处理。</p>
+</li>
+<li><p>放置在 public 目录下或通过绝对路径被引用。这类资源将会直接被拷贝，而不会经过 webpack 的处理</p>
+</li>
+</ul>
+<h4 id="URL-转换规则"><a href="#URL-转换规则" class="headerlink" title="URL 转换规则"></a>URL 转换规则</h4><ul>
+<li><p>如果 URL 是一个绝对路径 (例如 /images/foo.png)，它将会被保留不变。</p>
+</li>
+<li><p>如果 URL 以 . 开头，它会作为一个相对模块请求被解释且基于你的文件系统中的目录结构进行解析。</p>
+</li>
+<li><p>如果 URL 以 ~ 开头，其后的任何内容都会作为一个模块请求被解析。这意味着你甚至可以引用 Node 模块中的资源：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;~some-npm-package/foo.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果 URL 以 @ 开头(自定义别名)，它也会作为一个模块请求被解析。</p>
+</li>
+</ul>
+<h4 id="public-文件夹"><a href="#public-文件夹" class="headerlink" title="public 文件夹"></a>public 文件夹</h4><p>任何放置在 public 文件夹的静态资源都会被简单的复制，而不经过 webpack。你需要通过绝对路径来引用它们.</p>
+<ul>
+<li><p>通过 webpack 的处理并获得如下好处：</p>
+<ul>
+<li>脚本和样式表会被压缩且打包在一起，从而避免额外的网络请求。</li>
+<li>文件丢失会直接在编译时报错，而不是到了用户端才产生 404 错误。</li>
+<li>最终生成的文件名包含了内容哈希，因此你不必担心浏览器会缓存它们的老版本。</li>
+</ul>
+</li>
+<li><p>何时使用 public 文件夹</p>
+<ul>
+<li>你需要在构建输出中指定一个文件的名字。</li>
+<li>你有上千个图片，需要动态引用它们的路径。</li>
+<li>有些库可能和 webpack 不兼容，这时你除了将其用一个独立的 &lt;script&gt; 标签引入没有别的选择。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h2><p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/">vue-cli</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/53cca1aa49ba">vue-cli3打包配置优化</a><br><a target="_blank" rel="noopener" href="https://github.com/staven630/vue-cli4-config">vue-cli4 全面配置(持续更新)</a></p>
+<style>
+pre {
+  width: 100% !important;
+  white-space: pre !important;
+  /* overflow-y: scroll !important; */
+  max-height: 50vh !important;
+}
+</style>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/ts/typescript/" style="float: left;">
+        ← typescript
+    </a>
+    
+    
+    <a class="pull-right" href="/%E5%B7%A5%E7%A8%8B%E5%8C%96/package%E8%AF%A6%E8%A7%A3/">
+        package详解 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Victor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>
